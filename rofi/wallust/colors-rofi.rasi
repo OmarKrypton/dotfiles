@@ -1,0 +1,28 @@
+* {
+active-background: #131D44;
+active-foreground: #C1E1F9;
+normal-background: #03040B;
+normal-foreground: #C1E1F9;
+urgent-background: #405AA4;
+urgent-foreground: #C1E1F9;
+
+alternate-active-background: #2E6390;
+alternate-active-foreground: #C1E1F9;
+alternate-normal-background: #03040B;
+alternate-normal-foreground: #C1E1F9;
+alternate-urgent-background: #03040B;
+alternate-urgent-foreground: #C1E1F9;
+
+selected-active-background: #131D44;
+selected-active-foreground: #C1E1F9;
+selected-normal-background: #9ECCEE;
+selected-normal-foreground: #C1E1F9;
+selected-urgent-background: #405AA4;
+selected-urgent-foreground: #C1E1F9;
+
+background-color: #03040B;
+background: rgba(0,0,0,0.7);
+foreground: #9ECCEE;
+border-color: #131D44;
+}
+
