@@ -24,7 +24,7 @@
 	"group/my_apps",
 	],
 "modules-center": [
-	"hyprland/workspaces#pacman",
+	"hyprland/workspaces#kanji",
 	"custom/separator#blank_1",
 	"custom/swaync",
 	"custom/separator#blank_1",
