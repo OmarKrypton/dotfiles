@@ -31,6 +31,11 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
 ![Screenshot](Images/Screenshot2.png)
 ![Screenshot](Images/Screenshot3.png)
 
+**Graphite Purple Dark**
+![Screenshot](Images/Screenshot4.png)
+![Screenshot](Images/Screenshot5.png)
+![Screenshot](Images/Screenshot6.png)
+
 
 # Acknowledgements
 
