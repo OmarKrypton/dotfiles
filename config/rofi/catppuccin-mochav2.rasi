@@ -1,0 +1,251 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Master Config */
+
+/* ---- Configuration ---- */
+
+configuration {
+	modi:                       "drun,filebrowser";
+    show-icons:                 true;
+    display-drun:               "󰣖 Apps";
+    display-filebrowser:        "Files";
+    display-window:             "Windows";
+	drun-display-format:        "{name}";
+	hover-select:               true;
+	me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+	window-format:              "{w} · {c} · {t}";
+	dpi:						1;
+}
+
+/* ---- Load wallust colors ---- */
+@theme "~/.config/rofi/wallust/colors-rofi.rasi"
+
+/* ---- Global Properties ---- */
+* {
+
+    background-alt:              @selected-active-background; // Buttons background
+    selected:                    @selected-urgent-background; // Button selected
+    active:                      @selected-normal-background; // Window activated
+    urgent:                      @selected; // When hovering the activated window (maybe more?)
+
+    text-selected:               @background;
+    text-color:                  @foreground;
+    border-color:                @selected;
+    bg-col:  #1e1e2e;
+    bg-col-light: #1e1e2e;
+    border-col: #1e1e2e;
+    selected-col: #1e1e2e;
+    blue: #89b4fa;
+    fg-col: #cdd6f4;
+    fg-col2: #f38ba8;
+    grey: #6c7086;
+    lavender: #b4befe;
+    black: #000000;
+    base: #1e1e2e;
+    surface0: #313244;
+    overlay0: #6c7086;
+    text: #cdd6f4;
+    mauve: #cba6f7;
+    red: #f38ba8;
+    peach: #fab387;
+    green: #a6e3a1;
+}
+
+/* ---- Window ---- */
+window {
+    // Default
+    enabled:                    true;
+    fullscreen:                 false;
+    transparency:               "real";
+    cursor:                     "default";
+    spacing:                    0px;
+    border:                     2px;
+    border-radius:              30px;
+    location:                   center;
+    anchor:                     center;
+
+    // Style Values
+    width:                      700;
+    height:                     500;
+    background-color:           @bg-col;
+    border-color:               @lavender;
+}
+
+/* ----- Main Box ----- */
+mainbox {
+	padding:					 15px;
+    enabled:                     true;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+    background-color:            @bg-col;
+}
+
+
+/* ---- Inputbar ---- */
+inputbar {
+    enabled:                     true;
+    padding:                     10px 10px 100px 10px;
+    margin:                      10px;
+    background-color:            @bg-col;
+    border-radius:               25px;
+    orientation:                 horizontal;
+    children:                    ["entry", "dummy", "mode-switcher" ];
+    background-image:            url("~/.config/rofi/.current_wallpaper", width);
+}
+
+/* ---- Entry input ---- */
+entry {
+    enabled:                     true;
+    expand:                      false;
+    width:                       20%;
+    padding:                     10px;
+    border-radius:               12px;
+    background-color:            @bg-col;
+    text-color:                  @lavender;
+    cursor:                      text;
+    placeholder:                 "🖥️ Search "; // << Search symbol
+    placeholder-color:           inherit;
+}
+
+/* ---- Listbox ---- */
+listbox {
+    spacing:                     10px;
+    padding:                     10px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+/* ---- Listview ---- */
+listview {
+    enabled:                     true;
+    columns:                     2;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               true;
+    spacing:                     10px;
+    background-color:            @bg-col;
+
+//  Adapt rofi theme
+    border:                      0px;
+}
+
+/* ---- Dummy ---- */
+dummy {
+    expand:                      true;
+    background-color:            transparent;
+}
+
+/* ---- Mode Switcher ---- */
+mode-switcher{
+    enabled:                     true;
+    spacing:                     10px;
+    background-color:            @bg-col;
+}
+button {
+    width:                       5%;
+    padding:                     12px;
+    border-radius:               12px;
+    background-color:            @bg-col-light;
+    text-color:                  @grey;
+    cursor:                      pointer;
+}
+button selected {
+    background-color:            @bg-col;
+    text-color:                  @lavender;
+}
+
+/* ---- Scrollbar ---- */
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-color: @lavender;
+    handle-width: 8px ;
+    padding:      0;
+}
+
+/* ---- Elements ---- */
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px;
+    border-radius:               12px;
+    background-color:            @surface0;
+    text-color:                  @fg-col;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            inherit;
+}
+element normal.urgent {
+    background-color:            @red;
+    text-color:                  @foreground;
+}
+element normal.active {
+    background-color:            @peach;
+    text-color:                  @bg-col;
+}
+
+element selected.normal {
+    background-color:            @lavender;
+    text-color:                  @text-selected;
+}
+element selected.urgent {
+    background-color:            @urgent;
+    text-color:                  @text-selected;
+}
+element selected.active {
+    background-color:            @green;
+    text-color:                  @text-selected;
+}
+// Adapt rofi theme
+element alternate.normal {
+    background-color:            @bg-col;
+}
+element alternate.urgent {
+    background-color:            @red;
+    text-color:                  inherit;
+}
+element alternate.active {
+    background-color:            @peach;
+    text-color:                  @bg-col;
+}
+element-icon {
+    background-color:            inherit;
+    text-color:                  inherit;
+    size:                        36px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/* ---- Message ---- */
+message {
+    background-color:            @bg-col-light;
+    border-radius:               5px;
+}
+textbox {
+    padding:                     12px;
+    border-radius:               10px;
+    background-color:            @bg-col-light;
+    text-color:                  @blue;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     12px;
+    border-radius:               20px;
+    background-color:            @background-alt;
+    text-color:                  @background;
+}

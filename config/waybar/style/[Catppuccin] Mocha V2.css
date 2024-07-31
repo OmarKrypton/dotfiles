@@ -17,8 +17,8 @@ window#waybar {
   	transition-duration: 0.5s;
   	background: transparent;
   	border-radius: 10px;
-	border: 1px solid @overlay0;
-	background: #191329;
+	border: 1px solid @lavender;
+	background: #1e1e2e;
 }
 
 window#waybar.hidden {

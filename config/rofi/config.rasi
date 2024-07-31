@@ -12,5 +12,4 @@ element-text {
     font:	"Fira Code SemiBold 14";
 }
 
-
-@theme "/home/omar/.local/share/rofi/themes/catppuccin-mocha.rasi"
+@theme "~/.config/rofi/catppuccin-mocha.rasi"

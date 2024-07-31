@@ -10,6 +10,7 @@ configuration {
 
 window {
   width: 60%;
+  height: 500;
 }
 
 /* ---- Imagebox ---- */
@@ -27,7 +28,7 @@ entry {
 
 /* ---- Listview ---- */
 listview {
-  columns: 4;
+  columns: 5;
   lines: 3;
 }
 
