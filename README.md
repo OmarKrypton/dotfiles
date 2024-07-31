@@ -19,7 +19,7 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
 
 **Themes**
 
- - Added Catppuccin [GTK](https://www.gnome-look.org/p/1715554/) and [Kvantum](https://github.com/catppuccin/Kvantum) themes for a cohesive look across all apps.
+ - Added GTK, Kvantum, Kitty, and Rofi themes for a cohesive look across all apps.
  - Personalized appearance with a preferred color scheme.
 
 
