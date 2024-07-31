@@ -310,7 +310,8 @@ font-size: 12px;
 
 #custom-kate{
 padding-right: 14px;
-font-size: 13px;
+padding-top: 1px;
+font-size: 14px;
 }
 
 #custom-librewolf {
@@ -318,8 +319,4 @@ padding-right: 13px;
 font-size: 12px;
 }
 
-#custom-menu {
-padding-top: 2px;
-padding-right: 2px;
-padding-left: 10px;
-}
+
