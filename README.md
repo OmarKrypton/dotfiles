@@ -50,6 +50,13 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
 ![Screenshot](Screenshots/Screenshot9.png)
 
 
+# Instructions
+
+  - Create the following directories in your **home** directory if you don't have them: .icons and .themes.
+  - Copy the contents of the project's icons and themes folders into the corresponding directories you just created.
+  - Copy the contents of the project's config folder into your home directory's **.config** folder.
+  - Wallpapers are integrated with **hyprlock.conf** especially flatppuccin ones, copy them into **~/Pictures/wallpapers**. The other wallpapers are **optional**
+
 # Acknowledgements
 
 A big thank you to [JaKooLit](https://github.com/JaKooLit) for the original Hyprland dotfiles which served as the foundation for my configurations.
