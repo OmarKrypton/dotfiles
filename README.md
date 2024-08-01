@@ -27,27 +27,27 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
 
 ***Catppuccin Mocha***
 
-![Screenshot](Images/Screenshot10.png)
+![Screenshot](Screenshots/Screenshot10.png)
 
-![Screenshot](Images/Screenshot11.png)
+![Screenshot](Screenshots/Screenshot11.png)
 
-![Screenshot](Images/Screenshot12.png)
+![Screenshot](Screenshots/Screenshot12.png)
 
 ***Graphite Purple Dark***
 
-![Screenshot](Images/Screenshot4.png)
+![Screenshot](Screenshots/Screenshot4.png)
 
-![Screenshot](Images/Screenshot5.png)
+![Screenshot](Screenshots/Screenshot5.png)
 
-![Screenshot](Images/Screenshot6.png)
+![Screenshot](Screenshots/Screenshot6.png)
 
 ***Andromeda***
 
-![Screenshot](Images/Screenshot7.png)
+![Screenshot](Screenshots/Screenshot7.png)
 
-![Screenshot](Images/Screenshot8.png)
+![Screenshot](Screenshots/Screenshot8.png)
 
-![Screenshot](Images/Screenshot9.png)
+![Screenshot](Screenshots/Screenshot9.png)
 
 
 # Acknowledgements
