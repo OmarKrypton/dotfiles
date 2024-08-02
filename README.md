@@ -26,7 +26,6 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
 # Screenshots
 
 ***Catppuccin Mocha***
-
 ![Screenshot](Screenshots/Screenshot10.png)
 
 ![Screenshot](Screenshots/Screenshot11.png)
@@ -34,7 +33,6 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
 ![Screenshot](Screenshots/Screenshot12.png)
 
 ***Graphite Purple Dark***
-
 ![Screenshot](Screenshots/Screenshot4.png)
 
 ![Screenshot](Screenshots/Screenshot5.png)
@@ -42,7 +40,6 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
 ![Screenshot](Screenshots/Screenshot6.png)
 
 ***Andromeda***
-
 ![Screenshot](Screenshots/Screenshot7.png)
 
 ![Screenshot](Screenshots/Screenshot8.png)
@@ -61,12 +58,16 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
   
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
   
-
   Then Set the theme in your Zsh configuration:
 
     ZSH_THEME="powerlevel10k/powerlevel10k"
 
   - Then copy .p10k.zsh to your **home** directory
+
+***This is how it looks***
+
+![Screenshot](Screenshots/Screenshot13.png) 
+
 
 # Acknowledgements
 
