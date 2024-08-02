@@ -56,6 +56,17 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
   - Copy the contents of the project's icons and themes folders into the corresponding directories you just created.
   - Copy the contents of the project's config folder into your home directory's **.config** folder.
   - Wallpapers are integrated with **hyprlock.conf** especially flatppuccin ones, copy them into **~/Pictures/wallpapers**. The other wallpapers are **optional**
+  
+  **To install Powerlevel10k with Oh My Zsh:**
+  
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+  
+
+  Then Set the theme in your Zsh configuration:
+
+    ZSH_THEME="powerlevel10k/powerlevel10k"
+
+  - Then copy .p10k.zsh to your **home** directory
 
 # Acknowledgements
 
