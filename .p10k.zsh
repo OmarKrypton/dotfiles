@@ -31,6 +31,7 @@
 
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    user                    # username
     os_icon                 # os identifier
     dir                     # current directory
     vcs                     # git status
@@ -187,6 +188,11 @@
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=232
   typeset -g POWERLEVEL9K_OS_ICON_BACKGROUND=219
+  
+  # User segment configuration
+  typeset -g POWERLEVEL9K_USER_FOREGROUND=219
+  typeset -g POWERLEVEL9K_USER_BACKGROUND=232
+
   # Custom icon.
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
@@ -512,15 +518,15 @@
   # it will signify success by turning green.
   typeset -g POWERLEVEL9K_STATUS_OK=true
   typeset -g POWERLEVEL9K_STATUS_OK_VISUAL_IDENTIFIER_EXPANSION='✔'
-  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=232
-  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=219
+  typeset -g POWERLEVEL9K_STATUS_OK_FOREGROUND=219
+  typeset -g POWERLEVEL9K_STATUS_OK_BACKGROUND=232
 
   # Status when some part of a pipe command fails but the overall exit status is zero. It may look
   # like this: 1|0.
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE=true
   typeset -g POWERLEVEL9K_STATUS_OK_PIPE_VISUAL_IDENTIFIER_EXPANSION='✔'
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=2
-  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=0
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_FOREGROUND=219
+  typeset -g POWERLEVEL9K_STATUS_OK_PIPE_BACKGROUND=232
 
   # Status when it's just an error code (e.g., '1'). No need to show it if prompt_char is enabled as
   # it will signify error by turning red.
