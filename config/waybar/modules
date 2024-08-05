@@ -245,7 +245,7 @@
 		"custom/telegram",
 		"custom/vesktop",
 		"custom/thunar",
-		"custom/kate",
+		"custom/vscode",
 	]
 },
 
@@ -689,11 +689,11 @@
         "tooltip": true,
         "tooltip-format": "File Manager",
 },
-"custom/kate": {
-        "format": "<span color=\"#5e5ba8\"></span>",
-        "on-click": "/usr/bin/kate",
-        "tooltip": true,
-        "tooltip-format": "Kate",
+"custom/vscode": {
+	"format": "<span color=\"#5e5ba8\">󰨞</span>",
+	"on-click": "/usr/bin/code",
+	"tooltip": true,
+	"tooltip-format": "Code",
 },
 "custom/telegram": {
         "format": "<span color=\"#2aa7e1\"></span>",
