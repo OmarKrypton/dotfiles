@@ -51,7 +51,7 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
 
 ## Install via script
 1- Clone the repo
- ```git clone https://github.com/OmarKrypton/dotfiles.git```
+ ```git clone https://github.com/OmarKrypton/dotfiles.git ~/Downloads```
 
 2- Run the script in your terminal ```bash setup_dotfiles.sh```
 
