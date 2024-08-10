@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the source directory for your dotfiles
-DOTFILES_DIR="$HOME/Downloads/dotfiles"
+DOTFILES_DIR="$HOME/dotfiles"
 
 # Copy .icons and .themes content
 echo "Copying icons and themes..."
