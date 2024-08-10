@@ -49,6 +49,14 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
 
 # Instructions
 
+## Install via script
+1- Clone the repo
+ ```git clone https://github.com/OmarKrypton/dotfiles.git```
+
+2- Run the script in your terminal ```bash setup_dotfiles.sh```
+
+## Install manually
+  - Clone the repo
   - Create the following directories in your **home** directory if you don't have them: .icons and .themes.
   - Copy the contents of the project's icons and themes folders into the corresponding directories you just created.
   - Copy the contents of the project's config folder into your home directory's **.config** folder.
