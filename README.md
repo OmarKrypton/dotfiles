@@ -58,8 +58,8 @@ These are my Hyprland configuration files. They are based on [JaKooLit's Hyprlan
 ## Install manually
   - Clone the repo
   - Create the following directories in your **home** directory if you don't have them: .icons and .themes.
-  - Copy the contents of the project's icons and themes folders into the corresponding directories you just created.
-  - Copy the contents of the project's config folder into your home directory's **.config** folder.
+  - Copy the contents of the project's icons and themes directories into the corresponding directories you just created.
+  - Copy the contents of the project's config directory into **~/.config** directory.
   - Wallpapers are integrated with **hyprlock.conf** especially flatppuccin ones, copy them into **~/Pictures/wallpapers**. The other wallpapers are **optional**
   
   **To install Powerlevel10k with Oh My Zsh:**
