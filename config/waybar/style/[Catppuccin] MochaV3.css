@@ -1,5 +1,4 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Catppuccin Mocha */
+/* Catppuccin Mocha V3 */
 
 * {
 	font-family: "JetBrainsMono Nerd Font";
@@ -15,10 +14,8 @@
 window#waybar {
   	transition-property: background-color;
   	transition-duration: 0.5s;
-  	background: transparent;
+  	background: #1e1e2e;
   	border-radius: 10px;
-	border: 1px solid @lavender;
-	background: #1e1e2e;
 }
 
 window#waybar.hidden {
@@ -27,7 +24,7 @@ window#waybar.hidden {
 
 window#waybar.empty,
 window#waybar.empty #window {
-    /*background-color: transparent;*/
+    background-color: transparent;
     padding: 0px;
     border: 0px;
 }
@@ -64,6 +61,7 @@ window#waybar.empty #window {
 #taskbar button.active,
 #workspaces button.active {
 	color: @mauve;
+	background-color: @surface0;
   	border-radius: 10px;
     padding-left: 8px;
     padding-right: 8px;
@@ -77,7 +75,27 @@ window#waybar.empty #window {
 }
 
 /* This section can be use if you want to separate waybar modules */
+.modules-left, .modules-center, .modules-right {
+	background: @theme_base_color;
+ 	border: 0.5px solid @overlay0;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 4px;
+	padding-left: 4px;
+	border-radius: 40px;
 
+}
+
+.modules-left, .modules-right {
+  	border: 1px solid @blue;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.modules-center {
+	background: @lavender;
+}
 
 #backlight,
 #backlight-slider,
@@ -92,7 +110,6 @@ window#waybar.empty #window {
 #mode,
 #mpris,
 #network,
-#network.disconnected,
 #power-profiles-daemon,
 #pulseaudio,
 #pulseaudio-slider,
@@ -132,7 +149,7 @@ window#waybar.empty #window {
 }
 
 #idle_inhibitor {
-  color: @blue;
+  color: @surface0;
 }
 
 #bluetooth,
@@ -247,11 +264,11 @@ window#waybar.empty #window {
 #network {
   color: @teal;
 }
-/*#network.disconnected,
+#network.disconnected,
 #network.disabled {
   background-color: @surface0;
   color: @text;
-}*/
+}
 #pulseaudio-slider slider {
 	min-width: 0px;
 	min-height: 0px;
@@ -294,31 +311,36 @@ window#waybar.empty #window {
 
 /*----My apps----*/
 #custom-vesktop {
-padding-right: 9px;
-font-size: 12px;
+    padding-right: 9px;
+    font-size: 12px;
 }
 
 #custom-telegram{
-padding-right: 13px;
-font-size: 12px;
+    padding-right: 13px;
+    font-size: 12px;
 }
 
 #custom-thunar{
-padding-right: 13px;
-font-size: 12px;
+    padding-right: 13px;
+    font-size: 12px;
 }
 
-#custom-vscode{
-padding-right: 14px;
-padding-top: 1px;
-font-size: 14px;
+#custom-codium{
+    padding-right: 14px;
+    font-size: 13px;
 }
 
 #custom-librewolf {
-padding-right: 13px;
-font-size: 12px;
+    padding-right: 13px;
+    font-size: 12px;
 }
 
+#custom-menu {
+    padding-top: 4px;
+    padding-right: 2px;
+    padding-left: 10px;
+}
 
-
-
+#custom-swaync {
+    color: @surface0;
+}

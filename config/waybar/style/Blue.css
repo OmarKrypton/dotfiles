@@ -1,58 +1,57 @@
-/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
-/* ...........................................*/
-/* ...............Golden Noir................ */
-/* .......................................... */
-/* --- 👍 designed by https://github.com/Krautt  👍 --- */
+/* Blue */
+
 
 * {
-    font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
-	min-height: 0;  
-    /* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-    font-size: 97%;
-    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+	font-family: "JetBrains Mono Nerd Font";
+	font-weight: bold;
+	min-height: 0;	
+	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+	font-size: 97%;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
 window#waybar {
-    background: #040406;
-    border-radius: 30px;
-    color: #cba6f7;
-
+	background: #23232b;
+	border-radius: 50px;
+	color: #23232b;
 }
 
 window#waybar.hidden {
-    opacity: 0.5;
+	opacity: 0;
 }
+
 
 window#waybar.empty,
 window#waybar.empty #window {
-    padding: 0px;
-    border: 0px;
-    background-color: transparent;
+	padding: 0px;
+	border: 0px;
+	background: none;
 }
 
+
 tooltip {
-    background: #1e1e2e;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #11111b;
-    color: #ffd700;
+	background: #1e1e2e;
+	border-radius: 10px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #11111b;
+	color: whitesmoke;
 }
 
 /*-----module groups----*/
 .modules-right {
+	border: 3px solid #5d5dfb;
+	border-radius: 50px 50px 50px 50px;
+	background-color: #212121;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 4px;
 	padding-left: 4px;
-
 }
 
 .modules-center {
-    border-left: 1px solid #ffd700;
-    border-right: 1px solid #ffd700;
-    border-radius: 20px;
+	background-color: #5d5dfb;
+	border-radius: 50px 50px 50px 50px;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 4px;
@@ -60,6 +59,9 @@ tooltip {
 }
 
 .modules-left {
+	border: 3px solid #5d5dfb;
+	border-radius: 50px 50px 50px 50px;
+	background-color: #212121;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 4px;
@@ -67,7 +69,7 @@ tooltip {
 }
 
 #workspaces button {
-    color: #6E6A86;
+	color: whitesmoke;
     box-shadow: none;
 	text-shadow: none;
     padding: 0px;
@@ -78,35 +80,35 @@ tooltip {
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
-#taskbar button.active,
 #workspaces button.active {
-    color: #ffd700;
-    border-radius: 50%;
-    background-color: black;
+	color: whitesmoke;
+	background-color: #23232b;
     border-radius: 15px 15px 15px 15px;
     padding-left: 8px;
     padding-right: 8px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+
 }
 
 #workspaces button.focused {
-    color: #d8dee9;
+	color: #c42a60;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    border-radius: 10px;
+	color: #11111b;
+	border-radius: 10px;
 }
 
-#taskbar button:hover,
 #workspaces button:hover {
-    color: #ffd700;
+	color: #23232b;
+	background-color: #3e3eb5;
     border-radius: 15px;
  	padding-left: 2px;
     padding-right: 2px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+
 }
 
 #backlight,
@@ -118,6 +120,7 @@ tooltip {
 #disk,
 #idle_inhibitor,
 #keyboard-state,
+#language,
 #memory,
 #mode,
 #mpris,
@@ -125,6 +128,7 @@ tooltip {
 #power-profiles-daemon,
 #pulseaudio,
 #pulseaudio-slider,
+#taskbar button,
 #taskbar,
 #temperature,
 #tray,
@@ -154,74 +158,92 @@ tooltip {
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
-    color: #e5d9f5;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-right: 6px;
-	padding-left: 6px;
+	color: whitesmoke;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 4px;
+	padding-left: 4px;
+
 }
 
 #temperature.critical {
-    background-color: #ff0000;
+	background-color: #ff0000;
 }
 
 @keyframes blink {
-    to {
-        color: #000000;
-    }
+	to {
+		color: #000000;
+	}
+}
+
+#taskbar button.active {
+	background-color: pink;
+    padding-left: 12px;
+    padding-right: 12px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button:hover {
+	color: #ba5663;
+	background-color: #0d0a0d;
+    padding-left: 3px;
+    padding-right: 3px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #battery.critical:not(.charging) {
-    color: #f53c3c;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+	color: #f53c3c;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 #pulseaudio-slider slider {
-    min-width: 0px;
-    min-height: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
 }
 
 #pulseaudio-slider trough {
-    min-width: 80px;
-    min-height: 5px;
-    border-radius: 5px;
-    background-color: #22252a;
+	min-width: 80px;
+	min-height: 5px;
+	border-radius: 5px;
+	background-color: #22252a;
 }
 
 #pulseaudio-slider highlight {
-    min-height: 10px;
-    border-radius: 5px;
-    background-color: #ba5663;
+	min-height: 10px;
+	border-radius: 5px;
+	background-color: pink;
 }
 
 #backlight-slider slider {
-    min-width: 0px;
-    min-height: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
 }
 
 #backlight-slider trough {
-    min-width: 80px;
-    min-height: 10px;
-    border-radius: 5px;
-    background-color: #22252a;
+	min-width: 80px;
+	min-height: 10px;
+	border-radius: 5px;
+	background-color: #22252a;
 }
 
 #backlight-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: #ba5663;
+	min-width: 10px;
+	border-radius: 5px;
+	background-color: pink;
 }
 
 /*----My apps----*/

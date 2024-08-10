@@ -15,10 +15,12 @@
 "margin-top": 3,
 "margin-left": 8,
 "margin-right": 8,
+"height": 24,
 
 "modules-left": [
 	"custom/menu",
 	"custom/separator#dot-line",
+	"hyprland/window",
 	"group/my_apps",
 	],
 "modules-center": [
@@ -33,7 +35,7 @@
 	"custom/cava_mviz",
 	"custom/separator#blank_1",
 	"tray",
-        "custom/separator#dot-line",
+    "custom/separator#dot-line",
 	"group/connections",
 	"custom/separator#blank_1",
 	"group/audio",

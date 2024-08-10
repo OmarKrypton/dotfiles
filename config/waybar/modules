@@ -71,7 +71,7 @@
 	},
 	"format": "{icon}",
 	"format-icons": {
-            "active": "<span font='12'>󰮯</span>",
+            "active": "<span font='10'>󰮯</span>",
             "empty": "<span font='8'></span>",
             "default": "󰊠",
 	},
@@ -245,7 +245,7 @@
 		"custom/telegram",
 		"custom/vesktop",
 		"custom/thunar",
-		"custom/vscode",
+		"custom/codium",
 	]
 },
 
@@ -672,34 +672,34 @@
 
 // Added apps to the bar
 "custom/librewolf": {
-        "format": "<span color=\"#ff9700\"></span>",
-        "on-click": "/usr/bin/librewolf",
-        "tooltip": true,
-        "tooltip-format": "Librewolf",
+    "format": "<span color=\"#ff9700\"></span>",
+    "on-click": "/usr/bin/librewolf",
+    "tooltip": true,
+    "tooltip-format": "Librewolf",
 },  
 "custom/vesktop": {
-        "format": "<span color=\"#5f70be\"> </span>",
-        "on-click": "/usr/bin/vesktop",
-        "tooltip": true,
-        "tooltip-format": "Vesktop",
+    "format": "<span color=\"#5f70be\"> </span>",
+    "on-click": "/usr/bin/vesktop",
+    "tooltip": true,
+    "tooltip-format": "Vesktop",
 },
 "custom/thunar": {
-        "format": "<span color=\"#acbcdc\"></span>",
-        "on-click": "/usr/bin/thunar",
-        "tooltip": true,
-        "tooltip-format": "File Manager",
+    "format": "<span color=\"#acbcdc\"></span>",
+    "on-click": "/usr/bin/thunar",
+    "tooltip": true,
+    "tooltip-format": "File Manager",
 },
-"custom/vscode": {
-	"format": "<span color=\"#5e5ba8\">󰨞</span>",
-	"on-click": "/usr/bin/code",
+"custom/codium": {
+	"format": "<span color=\"#5e5ba8\"></span>",
+	"on-click": "/usr/bin/codium",
 	"tooltip": true,
-	"tooltip-format": "Code",
+	"tooltip-format": "Codium",
 },
 "custom/telegram": {
-        "format": "<span color=\"#2aa7e1\"></span>",
-        "on-click": "flatpak run org.telegram.desktop",
-        "tooltip": true,
-        "tooltip-format": "Telegram",
+    "format": "<span color=\"#2aa7e1\"></span>",
+    "on-click": "flatpak run org.telegram.desktop",
+    "tooltip": true,
+    "tooltip-format": "Telegram",
 },
 
 // This is a custom cava visualizer

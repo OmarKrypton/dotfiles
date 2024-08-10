@@ -196,34 +196,38 @@ window#waybar.empty #window {
 
 /*----My apps----*/
 #custom-vesktop {
-padding-right: 9px;
-font-size: 12px;
+    padding-right: 9px;
+    font-size: 12px;
 }
 
 #custom-telegram{
-padding-right: 13px;
-font-size: 12px;
+    padding-right: 13px;
+    font-size: 12px;
 }
 
 #custom-thunar{
-padding-right: 13px;
-font-size: 12px;
+    padding-right: 13px;
+    font-size: 12px;
 }
 
-#custom-vscode {
-padding-right: 14px;
-font-size: 13px;
+#custom-codium{
+    padding-right: 14px;
+    font-size: 13px;
 }
 
 #custom-librewolf {
-padding-right: 13px;
-font-size: 12px;
+    padding-right: 13px;
+    font-size: 12px;
 }
 
 #custom-menu {
-padding-top: 2px;
-padding-right: 2px;
-padding-left: 10px;
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-left: 10px;
+}
+#custom-vscode{
+	padding-right: 14px;
+	font-size: 13px;
 }
 	
 	
