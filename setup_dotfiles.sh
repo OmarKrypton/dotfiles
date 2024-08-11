@@ -24,11 +24,13 @@ mkdir -p ~/.icons ~/.themes
 cp -r "$DOTFILES_DIR/.icons/." ~/.icons/ > /dev/null 2>&1
 cp -r "$DOTFILES_DIR/.themes/." ~/.themes/ > /dev/null 2>&1
 echo "Successfully copied icons and themes!"
+
 # Copy config content
 echo "Copying configuration files..."
 mkdir -p ~/.config
 cp -r "$DOTFILES_DIR/config/." ~/.config/ > /dev/null 2>&1
 echo "Successfully copied config files!"
+
 # Copy wallpapers
 echo "Copying wallpapers..."
 mkdir -p ~/Pictures/wallpapers
