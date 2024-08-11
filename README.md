@@ -1,3 +1,6 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/OmarKrypton/dotfiles?style=for-the-badge&color=b4befe)
+![GitHub repo size](https://img.shields.io/github/repo-size/OmarKrypton/dotfiles?style=for-the-badge&color=cba6f7) 
+
 # Hyprland Dotfiles
 
 These are my Hyprland configuration files. They are based on [JaKooLit's Hyprland dotfiles](https://github.com/JaKooLit/Hyprland-Dots) with custom configurations tailored to my preferences.
