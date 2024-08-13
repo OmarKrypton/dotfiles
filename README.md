@@ -1,7 +1,24 @@
-# Hyprland Dotfiles
+<h3 align="center">
+	<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="25" height="25" />
+	Krypton Hyprland Dotfiles
+	<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="25" height="25" />
+</h3>
 
-These are my Hyprland configuration files. They are based on [JaKooLit's Hyprland dotfiles](https://github.com/JaKooLit/Hyprland-Dots) with custom configurations tailored to my preferences.
+ 
 
+
+<div align="center">
+  <img src="https://img.shields.io/github/last-commit/OmarKrypton/dotfiles?style=for-the-badge&color=b4befe" alt="GitHub last commit">
+  <img src="https://img.shields.io/github/repo-size/OmarKrypton/dotfiles?style=for-the-badge&color=cba6f7" alt="GitHub repo size">
+</div>
+
+
+<div align="center">
+
+ ### *These are my Hyprland configuration files. They are based on [JaKooLit's Hyprland dotfiles](https://github.com/JaKooLit/Hyprland-Dots) with custom configurations tailored to my preferences.*
+</div>
+
+# 
 # Custom Configurations
 
 **Waybar**
