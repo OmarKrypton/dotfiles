@@ -61,7 +61,7 @@ window#waybar.empty #window {
 #taskbar button.active,
 #workspaces button.active {
 	color: @mauve;
-	background-color: @surface0;
+	background-color: @theme_base_color;
   	border-radius: 10px;
     padding-left: 8px;
     padding-right: 8px;
@@ -266,7 +266,7 @@ window#waybar.empty #window {
 }
 #network.disconnected,
 #network.disabled {
-  background-color: @surface0;
+  background-color: @theme_base_color;
   color: @text;
 }
 #pulseaudio-slider slider {
@@ -343,4 +343,10 @@ window#waybar.empty #window {
 
 #custom-swaync {
     color: @surface0;
+}
+
+#window {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-size: 10px;
 }

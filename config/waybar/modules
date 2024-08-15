@@ -425,6 +425,12 @@
 		"(.*) - $term": "> [$1]",
 	},
 },
+"custom/window-name": {
+    "format": "<b>{}</b>",
+    "interval": 1,
+    "exec": "hyprctl activewindow | grep \"class:\" | awk '{print $2}' | sed 's/\\([[:alpha:]]\\)/\\U\\1/'"
+},
+
 "idle_inhibitor": {
 	"format": "{icon}",
 	"format-icons": {
@@ -705,7 +711,8 @@
 // This is a custom cava visualizer
 "custom/cava_mviz": {
 	"exec": "~/.config/hypr/scripts/WaybarCava.sh",
-	"format": "{}"
+	"format": "{}",
+	"tooltip": false,
 },
 "custom/playerctl": {
 	"format": "<span>{}</span>",
