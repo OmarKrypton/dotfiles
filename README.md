@@ -104,12 +104,15 @@
 
 ## Example Screenshots
  
- ### Powerlevel10k
+<details>
+  <summary>Powerlevel10k</summary>
   <img src="Screenshots/Screenshot13.png" alt="Powerlevel10k">
- 
- ### Starship
-  <img src="Screenshots/Screenshot14.png" alt="Starship">
+</details>
 
+<details>
+  <summary>Starship</summary>
+  <img src="Screenshots/Screenshot14.png" alt="Starship">
+</details>
 
 
 # Acknowledgements
