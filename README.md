@@ -42,27 +42,35 @@
 
 # Screenshots
 
-***Catppuccin Mocha***
+<details>
+  <summary>Catppuccin Mocha</summary>
+
 ![Screenshot](Screenshots/Screenshot10.png)
 
 ![Screenshot](Screenshots/Screenshot11.png)
 
 ![Screenshot](Screenshots/Screenshot12.png)
+</details>
 
-***Graphite Purple Dark***
+<details>
+  <summary>Graphite Purple</summary>
+	
 ![Screenshot](Screenshots/Screenshot4.png)
 
 ![Screenshot](Screenshots/Screenshot5.png)
 
 ![Screenshot](Screenshots/Screenshot6.png)
+</details>
 
-***Andromeda***
+<details>
+  <summary>Andromeda</summary>
+
 ![Screenshot](Screenshots/Screenshot7.png)
 
 ![Screenshot](Screenshots/Screenshot8.png)
 
 ![Screenshot](Screenshots/Screenshot9.png)
-
+</details>
 
 # Instructions
 
@@ -80,6 +88,8 @@
   - Copy the contents of the project's config directory into **~/.config** directory.
   - Wallpapers are integrated with **hyprlock.conf**, copy them into **~/Pictures/wallpapers**.
   
+ 
+  
   **To install Powerlevel10k with Oh My Zsh:**
   
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
@@ -88,25 +98,30 @@
 
     ZSH_THEME="powerlevel10k/powerlevel10k"
 
-  - Then copy .p10k.zsh to your **home** directory
+  Then copy .p10k.zsh to your **home** directory
 
+  
+ 
   **To install Starship:**
    
-   curl -sS https://starship.rs/install.sh | sh
+    curl -sS https://starship.rs/install.sh | sh
    
   Then Add the following to the end of ~/.zshrc:
 
     eval "$(starship init zsh)"
     
-  *Note:* Use either Powerlevel10k or starship.
+  
+  ***NOTE:*** Use either Powerlevel10k or starship.
 
-***This is how it looks***
 
-***p10k***
-![Screenshot](Screenshots/Screenshot13.png) 
 
-**Starship**
-![Screenshot](Screenshots/Screenshot14.png)
+  ***p10k***
+
+  ![Screenshot](Screenshots/Screenshot13.png) 
+
+  **Starship**
+
+  ![Screenshot](Screenshots/Screenshot14.png)
 
 
 # Acknowledgements
