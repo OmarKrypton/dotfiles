@@ -42,27 +42,35 @@
 
 # Screenshots
 
-***Catppuccin Mocha***
+<details>
+  <summary>Catppuccin Mocha</summary>
+
 ![Screenshot](Screenshots/Screenshot10.png)
 
 ![Screenshot](Screenshots/Screenshot11.png)
 
 ![Screenshot](Screenshots/Screenshot12.png)
+</details>
 
-***Graphite Purple Dark***
+<details>
+  <summary>Graphite Purple</summary>
+	
 ![Screenshot](Screenshots/Screenshot4.png)
 
 ![Screenshot](Screenshots/Screenshot5.png)
 
 ![Screenshot](Screenshots/Screenshot6.png)
+</details>
 
-***Andromeda***
+<details>
+  <summary>Andromeda</summary>
+
 ![Screenshot](Screenshots/Screenshot7.png)
 
 ![Screenshot](Screenshots/Screenshot8.png)
 
 ![Screenshot](Screenshots/Screenshot9.png)
-
+</details>
 
 # Instructions
 
@@ -103,18 +111,17 @@
     eval "$(starship init zsh)"
     
   
-  *Note:* Use either Powerlevel10k or starship.
+  ***NOTE:*** Use either Powerlevel10k or starship.
 
 
-***This is how it looks***
 
-***p10k***
+  ***p10k***
 
-![Screenshot](Screenshots/Screenshot13.png) 
+  ![Screenshot](Screenshots/Screenshot13.png) 
 
-**Starship**
+  **Starship**
 
-![Screenshot](Screenshots/Screenshot14.png)
+  ![Screenshot](Screenshots/Screenshot14.png)
 
 
 # Acknowledgements
