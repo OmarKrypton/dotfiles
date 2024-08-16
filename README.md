@@ -96,7 +96,7 @@
  
   **To install Starship:**
    
-   curl -sS https://starship.rs/install.sh | sh
+    curl -sS https://starship.rs/install.sh | sh
    
   Then Add the following to the end of ~/.zshrc:
 
