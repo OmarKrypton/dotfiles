@@ -12,21 +12,24 @@
   }
 
   .modules-left {
-    background-color: #1e2030;
+    border: 2px solid #f2e4cb;
+    background-color: #1e1e2e;
     border-radius: 8px;
     padding-right: 10px;
     padding-left: 10px;
   }
 
   .modules-center {
-    background-color: #1e2030;
+    border: 2px solid #1e1e2e;
+    background-color: #f2e4cb;
     border-radius: 8px;
     padding-right: 10px;
     padding-left: 0px;
   }
 
   .modules-right {
-    background-color: #1e2030;
+    border: 2px solid #f2e4cb;
+    background-color: #1e1e2e;
     border-radius: 8px;
     padding-right: 10px;
     padding-left: 10px;
@@ -51,33 +54,34 @@
     padding-right: 4px;
     margin-top: 5px;
     margin-bottom: 4px;
+    margin-left: 5px;
 }
 
 #taskbar button:hover,
 #workspaces button:hover {
 	  border-radius: 10px;
-	  color: #fab387;
-	  background-color: @theme_base_color;
+	  color: #1e1e2e;
+	  background-color: #b69682;
     padding-left: 4px;
     padding-right: 4px;
 }
 
 #workspaces button.persistent {
-	  color: #45475a;
+	  color: #1e1e2e;
 	  border-radius: 10px;
 }
 
 #taskbar button.active,
 #workspaces button.active {
-	  color: #cba6f7;
-	  background-color: @theme_base_color;
+	  color: #f2e4cb;
+	  background-color: #1e1e2e;
     border-radius: 10px;
     padding-left: 4px;
     padding-right: 4px;
 }
 
 #workspaces button.urgent {
-	  color: #f38ba8;
+	  color: #ff3030;
     border-radius: 0px;
 }
 
@@ -109,12 +113,12 @@
 
   #custom-window-name {
     margin-right: 10px;
-    color: #ffffff;
+    color: #f2e4cb;
   }
 
   #custom-pacman-update-icon {
-    background-color: #8bd5ca;
-    color: #181926;
+    background-color: #f2e4cb;
+    color: #1e1e2e;
     padding-left: 5px;
     padding-right: 5px;
     margin-top: 5px;
@@ -144,7 +148,7 @@
 
   #my_apps {
     font-size: 12px;
-    background-color: #363a4f;
+    background-color: #f2e4cb;
     padding-left: 8px;
     padding-right: 8px;
     margin-top: 5px;
@@ -157,7 +161,7 @@
   #pulseaudio,
   #backlight {
     font-size: 12px;
-    background: #363a4f;
+    background: #f2e4cb;
     margin-top: 5px;
     margin-bottom: 5px;
   }
@@ -167,7 +171,7 @@
   }
 
   #backlight {
-    color: #eed49f;
+    color: #1e1e2e;
     padding: 0px 5px 0px 10px;
     border-radius: 5px 5px 5px 5px;
   }
@@ -185,7 +189,7 @@
   }
 
   #pulseaudio {
-    color: #91d7e3;
+    color: #1e1e2e;
     padding: 0px 10px 0px 10px;
     border-radius: 5px 5px 5px 5px;
   }
@@ -195,12 +199,13 @@
   }
 
   #bluetooth {
+    color: #1e1e2e;
     padding: 0px 10px 0px 10px;
     border-radius: 5px 5px 5px 5px;
   }
 
   #network {
-    color: #c6a0f6;
+    color: #1e1e2e;
     padding: 0px 14px 0px 10px;
     border-radius: 5px 5px 5px 5px;
   }
@@ -228,11 +233,11 @@
   }
 
   #clock {
-    color: #b4befe;
+    color: #1e1e2e;
     margin-right: 5px;
     margin-left: 5px;
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 
   #custom-music {
@@ -256,7 +261,7 @@
   }
 
   #language {
-    color: #f4dbd6;
+    color: #f2e4cb;
     margin-right: 5px;
     font-size: 12px;
     margin-top: 5px;
@@ -264,14 +269,14 @@
   }
 
   #custom-swaync {
-    color: #f5c2e7;
+    color: #1e1e2e;
     margin-right: 5px;
     margin-left: 5px;
     font-size: 12px;
   }
 
   #idle_inhibitor {
-    color: #b6ffcf;
+    color: #1e1e2e;
     font-size: 12px;
     margin-left: 5px;
   }
@@ -295,7 +300,7 @@
 
   #custom-codium {
     padding-right: 5px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   #custom-librewolf {
@@ -304,7 +309,7 @@
   }
 
   #custom-menu {
-    color: #91d7e3;
+    color: #f2e4cb;
     font-size: 12px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -313,4 +318,8 @@
   #custom-power {
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+
+  #custom-cava_mviz {
+    color: #f2e4cb;
   }

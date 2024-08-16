@@ -678,31 +678,31 @@
 
 // Added apps to the bar
 "custom/librewolf": {
-    "format": "<span color=\"#ff9700\"></span>",
+    "format": "<span color=\"#1e1e2e\"></span>",
     "on-click": "/usr/bin/librewolf",
     "tooltip": true,
     "tooltip-format": "Librewolf",
 },  
 "custom/vesktop": {
-    "format": "<span color=\"#5f70be\"> </span>",
+    "format": "<span color=\"#1e1e2e\"> </span>",
     "on-click": "/usr/bin/vesktop",
     "tooltip": true,
     "tooltip-format": "Vesktop",
 },
 "custom/thunar": {
-    "format": "<span color=\"#acbcdc\"></span>",
+    "format": "<span color=\"#1e1e2e\"></span>",
     "on-click": "/usr/bin/thunar",
     "tooltip": true,
     "tooltip-format": "File Manager",
 },
 "custom/codium": {
-	"format": "<span color=\"#5e5ba8\"></span>",
+	"format": "<span color=\"#1e1e2e\"></span>",
 	"on-click": "/usr/bin/codium",
 	"tooltip": true,
 	"tooltip-format": "Codium",
 },
 "custom/telegram": {
-    "format": "<span color=\"#2aa7e1\"></span>",
+    "format": "<span color=\"#1e1e2e\"></span>",
     "on-click": "flatpak run org.telegram.desktop",
     "tooltip": true,
     "tooltip-format": "Telegram",

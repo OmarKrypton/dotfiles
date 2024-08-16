@@ -17,6 +17,7 @@
     red: #f38ba8;
     peach: #fab387;
     green: #a6e3a1;
+    nier:  #f2e4cb;
 
     width: 600;
     font: "JetBrainsMono Nerd Font 14";
@@ -33,7 +34,7 @@ window {
     width: 600;
     border: 3px;
     border-radius: 10;
-    border-color: @lavender;
+    border-color: @nier;
     background-color: @bg-col;
 }
 
@@ -55,17 +56,19 @@ scrollbar {
     border:       0;
     border-color: @lavender;
     border-radius: 0px;
-    handle-color: @fg-col2;
+    handle-color: @lavender;
     handle-width: 5px ;
     padding:      4;
     background-color: @bg-col;
 }
 
 prompt {
-    background-color: @blue;
+    background-color: @nier;
     padding: 6px;
     text-color: @bg-col;
-    border-radius: 3px;
+    border: 2;
+    border-radius: 10px;
+    border-color: @bg-col;
     margin: 20px 0px 0px 5px;
 }
 
@@ -77,11 +80,11 @@ textbox-prompt-colon {
 entry {
     padding: 6px;
     margin: 20px 5px 0px 5px;
-    text-color: @lavender;
+    text-color: @nier;
     background-color: @bg-col;
     border: 2;
     border-radius: 10;
-    border-color: @lavender;
+    border-color: @nier;
 }
 
 listview {
@@ -108,7 +111,7 @@ element-icon {
 }
 
 element selected {
-    background-color:  @fg-col2 ;
+    background-color:  @nier ;
     text-color: @bg-col  ;
 }
 
