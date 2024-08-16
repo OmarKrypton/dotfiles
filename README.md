@@ -78,7 +78,7 @@
   - Create the following directories in your **home** directory if you don't have them: .icons and .themes.
   - Copy the contents of the project's icons and themes directories into the corresponding directories you just created.
   - Copy the contents of the project's config directory into **~/.config** directory.
-  - Wallpapers are integrated with **hyprlock.conf** especially flatppuccin ones, copy them into **~/Pictures/wallpapers**. The other wallpapers are **optional**
+  - Wallpapers are integrated with **hyprlock.conf**, copy them into **~/Pictures/wallpapers**.
   
   **To install Powerlevel10k with Oh My Zsh:**
   
