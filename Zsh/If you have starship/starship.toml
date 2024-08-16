@@ -1,0 +1,154 @@
+# ~/.config/starship.toml
+
+format = """
+[](#DDB6F2)\
+$os\
+$username\
+[](bg:#F2CDCD fg:#DDB6F2)\
+$directory\
+[](fg:#F2CDCD bg:#F8BD96)\
+$git_branch\
+$git_status\
+[](fg:#F8BD96 bg:#74C7EC)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:#74C7EC bg:#8BD5CA)\
+$docker_context\
+[](fg:#8BD5CA bg:#8AADF4)\
+$time\
+[ ](fg:#8AADF4)\
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# Username
+[username]
+show_always = true
+style_user = "bg:#DDB6F2 fg:#1E1E2E"  # Mauve background with dark foreground
+style_root = "bg:#DDB6F2 fg:#1E1E2E"  # Same for root
+format = '[$user ]($style)'
+disabled = false
+
+# OS (if used)
+[os]
+style = "bg:#DDB6F2 fg:#1E1E2E"  # Mauve background with dark foreground
+disabled = true
+
+# Directory
+[directory]
+style = "bg:#F2CDCD fg:#1E1E2E"  # Flamingo background with dark foreground
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+# C
+[c]
+symbol = " "
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Docker Context
+[docker_context]
+symbol = " "
+style = "bg:#8BD5CA fg:#1E1E2E"  # Teal background with dark foreground
+format = '[ $symbol $context ]($style)'
+
+# Elixir
+[elixir]
+symbol = " "
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Elm
+[elm]
+symbol = " "
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Git Branch
+[git_branch]
+symbol = ""
+style = "bg:#F8BD96 fg:#1E1E2E"  # Peach background with dark foreground
+format = '[ $symbol $branch ]($style)'
+
+# Git Status
+[git_status]
+style = "bg:#F8BD96 fg:#1E1E2E"  # Peach background with dark foreground
+format = '[$all_status$ahead_behind ]($style)'
+
+# Golang
+[golang]
+symbol = " "
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Gradle
+[gradle]
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Haskell
+[haskell]
+symbol = " "
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Java
+[java]
+symbol = " "
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Julia
+[julia]
+symbol = " "
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Node.js
+[nodejs]
+symbol = ""
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Nim
+[nim]
+symbol = "󰆥 "
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Rust
+[rust]
+symbol = ""
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Scala
+[scala]
+symbol = " "
+style = "bg:#74C7EC fg:#1E1E2E"  # Sapphire background with dark foreground
+format = '[ $symbol ($version) ]($style)'
+
+# Time
+[time]
+disabled = false
+time_format = "%R"  # Hour:Minute Format
+style = "bg:#8AADF4 fg:#1E1E2E"  # Blue background with dark foreground
+format = '[ ♥ $time ]($style)'
