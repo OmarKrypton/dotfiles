@@ -72,6 +72,16 @@
 ![Screenshot](Screenshots/Screenshot9.png)
 </details>
 
+<details>
+  <summary>Nier Automata</summary>
+
+![Screenshot](Screenshots/Screenshot15.png)
+
+![Screenshot](Screenshots/Screenshot16.png)
+
+![Screenshot](Screenshots/Screenshot17.png)
+</details>
+
 # Instructions
 
 ## Install via script
