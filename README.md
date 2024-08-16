@@ -102,17 +102,17 @@
     eval "$(starship init zsh)"
   ***Note:*** Use either Powerlevel10k or Starship.
 
-## Example Screenshots
+  ### Example Screenshots
  
-<details>
-  <summary>Powerlevel10k</summary>
-  <img src="Screenshots/Screenshot13.png" alt="Powerlevel10k">
-</details>
+  <details>
+    <summary>Powerlevel10k</summary>
+    <img src="Screenshots/Screenshot13.png" alt="Powerlevel10k">
+  </details>
 
-<details>
-  <summary>Starship</summary>
-  <img src="Screenshots/Screenshot14.png" alt="Starship">
-</details>
+  <details>
+    <summary>Starship</summary>
+    <img src="Screenshots/Screenshot14.png" alt="Starship">
+  </details>
 
 
 # Acknowledgements
