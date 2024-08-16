@@ -85,7 +85,7 @@
   
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
   
-  Then Set the theme in your Zsh configuration:
+  Then Set the theme in ~/.zshrc:
 
     ZSH_THEME="powerlevel10k/powerlevel10k"
 
