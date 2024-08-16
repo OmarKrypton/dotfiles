@@ -109,9 +109,11 @@
 ***This is how it looks***
 
 ***p10k***
+
 ![Screenshot](Screenshots/Screenshot13.png) 
 
 **Starship**
+
 ![Screenshot](Screenshots/Screenshot14.png)
 
 
