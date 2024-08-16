@@ -90,9 +90,23 @@
 
   - Then copy .p10k.zsh to your **home** directory
 
+  **To install Starship:**
+   
+   curl -sS https://starship.rs/install.sh | sh
+   
+  Then Add the following to the end of ~/.zshrc:
+
+    eval "$(starship init zsh)"
+    
+  *Note:* Use either Powerlevel10k or starship.
+
 ***This is how it looks***
 
+***p10k***
 ![Screenshot](Screenshots/Screenshot13.png) 
+
+**Starship**
+![Screenshot](Screenshots/Screenshot14.png)
 
 
 # Acknowledgements
