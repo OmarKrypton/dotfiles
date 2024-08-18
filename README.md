@@ -62,6 +62,13 @@
   <img src="Screenshots/Screenshot17.png" alt="Nier Automata Screenshot">
 </details>
 
+<details>
+  <summary>Aesthetic Green</summary>
+  <img src="Screenshots/Screenshot18.png" alt="Nier Automata Screenshot">
+  <img src="Screenshots/Screenshot19.png" alt="Nier Automata Screenshot">
+  <img src="Screenshots/Screenshot20.png" alt="Nier Automata Screenshot">
+</details>
+
 # Installation Instructions
 
 ## Install via Script

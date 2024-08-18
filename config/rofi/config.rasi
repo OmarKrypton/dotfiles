@@ -12,4 +12,4 @@ element-text {
     font:	"Fira Code SemiBold 14";
 }
 
-@theme "~/.config/rofi/nier-automata.rasi"
+@theme "~/.config/rofi/aesthetic-green.rasi"

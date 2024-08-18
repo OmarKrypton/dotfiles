@@ -1,0 +1,330 @@
+* {
+	font-family: "JetBrainsMono Nerd Font";
+	font-weight: bold;
+	min-height: 0;
+	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+	font-size: 97%;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+@import "../waybar/style/catppuccin-themes/mocha.css";
+
+  window#waybar {
+    background-color: @transparent;
+  }
+
+  .modules-left {
+    border: 2px solid #89bda6;
+    background-color: #2e3440;
+    border-radius: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .modules-center {
+    border: 0px solid #2e3440;
+    background-color: #89bda6;
+    border-radius: 30px;
+    padding-right: 10px;
+    padding-left: 0px;
+  }
+
+  .modules-right {
+    border: 2px solid #89bda6;
+    background-color: #2e3440;
+    border-radius: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #custom-launcher {
+    font-size: 20px;
+    color: #89bda6;  
+    padding-right: 10px;
+  }
+
+  /* Workspace */
+
+#taskbar button,
+#workspaces button {
+	  color: #7f849c;
+    box-shadow: none;
+	  text-shadow: none;
+    padding: 0px;
+    border-radius: 30px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 5px;
+    margin-bottom: 4px;
+    margin-left: 5px;
+}
+
+#taskbar button:hover,
+#workspaces button:hover {
+	  border-radius: 30px;
+	  color: #89bda6;
+	  background-color: @surface0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#workspaces button.persistent {
+	  color: @surface1;
+	  border-radius: 30px;
+}
+
+#taskbar button.active,
+#workspaces button.active {
+	  color: #89bda6;
+	  background-color: #2e3440;
+    border-radius: 30px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#workspaces button.urgent {
+	  color: #ff3030;
+    border-radius: 0px;
+}
+
+  #cpu,
+  #memory,
+  #temperature {
+    font-size: 14px;
+    background: #363a4f;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #cpu {
+    color: #eed49f;
+    padding: 0px 10px 0px 12px;
+    border-radius: 5px 0px 0px 5px;
+  }
+
+  #memory {
+    color: #a6da95;
+    padding: 0px 10px 0px 0px;
+  }
+
+  #temperature {
+    color: #8aadf4;
+    padding: 0px 12px 0px 0px;
+    border-radius: 0px 5px 5px 0px;
+  }
+
+  #custom-window-name {
+    margin-right: 10px;
+    color: #f2e4cb;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  #custom-pacman-update-icon {
+    background-color: #f2e4cb;
+    color: #1e1e2e;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  #custom-pacman-update {
+    color: #8bd5ca;
+    margin: 5px 10px 5px 0px;
+  }
+
+  #battery {
+    color: #a6da95;
+    margin-right: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #custom-power {
+    color: #ed8796;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+
+  #my_apps {
+    font-size: 12px;
+    background-color: #89bda6;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+  }
+
+  #bluetooth,
+  #network,
+  #pulseaudio,
+  #backlight {
+    font-size: 12px;
+    background: #89bda6;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #connections {
+    font-size: 12px;
+  }
+
+  #backlight {
+    color: #2e3440;
+    padding: 0px 7px 0px 10px;
+    border-radius: 30px;
+  }
+
+  #custom-wl-gammarelay-temperature {
+    font-size: 14px;
+    background: #363a4f;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #custom-wl-gammarelay-temperature {
+    color: #eed49f;
+    padding: 0px 10px 0px 10px;
+  }
+
+  #pulseaudio {
+    color: #2e3440;
+    padding: 0px 10px 0px 10px;
+    border-radius: 30px;
+  }
+
+  #custom-right-arr {
+    color: #8aadf4;
+  }
+
+  #bluetooth {
+    color: #2e3440;
+    padding: 0px 10px 0px 10px;
+    border-radius: 30px;
+  }
+
+  #network {
+    color: #2e3440;
+    padding: 0px 14px 0px 10px;
+    border-radius: 30px;
+  }
+
+  #custom-dot {
+    color: #6e738d;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #custom-dot-alt {
+    color: #a5adcb;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #custom-clock-icon {
+    background-color: #cad3f5;
+    color: #181926;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  #clock {
+    color: #2e3440;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 4px;
+  }
+
+  #custom-music {
+    background: #363a4f;
+    border-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #custom-music.Playing {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+    font-weight: bold;
+    color: #fff;
+  }
+
+  #custom-music.Paused,
+  #custom-music.Stopped {
+    background: #161925;
+  }
+
+  #language {
+    color: #f2e4cb;
+    margin-right: 5px;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #custom-swaync {
+    color: #2e3440;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 12px;
+  }
+
+  #idle_inhibitor {
+    color: #2e3440;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+/*----My apps----*/
+
+  #custom-vesktop {
+    padding-right: 9px;
+    font-size: 12px;
+  }
+
+  #custom-telegram {
+    padding-right: 13px;
+    font-size: 12px;
+  }
+
+  #custom-thunar {
+    padding-right: 13px;
+    font-size: 12px;
+  }
+
+  #custom-codium {
+    padding-right: 5px;
+    font-size: 12px;
+  }
+
+  #custom-librewolf {
+    padding-right: 13px;
+    font-size: 12px;
+  }
+
+  #custom-menu {
+    color: #f2e4cb;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #custom-power {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #custom-cava_mviz {
+    color: #89bda6;
+  }

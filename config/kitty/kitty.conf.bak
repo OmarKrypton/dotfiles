@@ -24,6 +24,6 @@ window_padding_width 4
 
 
 # BEGIN_KITTY_THEME
-# Kanagawa_dragon
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME
