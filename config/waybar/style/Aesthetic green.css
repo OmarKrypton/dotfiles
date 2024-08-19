@@ -23,7 +23,7 @@
 
   .modules-center {
     border: 0px solid #2e3440;
-    background-color: #89bda6;
+    background-image: radial-gradient(circle, #8ed0b2, #73a48e);
     border-radius: 30px;
     padding-right: 10px;
     padding-left: 0px;
@@ -44,48 +44,47 @@
   }
 
   /* Workspace */
-
-#taskbar button,
-#workspaces button {
-	  color: #7f849c;
-    box-shadow: none;
-	  text-shadow: none;
-    padding: 0px;
+  #taskbar button,
+  #workspaces button {
+      color: #2e3440;
+      box-shadow: none;
+      text-shadow: none;
+      padding: 0px;
+      border-radius: 30px;
+      padding-left: 4px;
+      padding-right: 4px;
+      margin-top: 5px;
+      margin-bottom: 4px;
+      margin-left: 5px;
+  }
+  
+  #taskbar button:hover,
+  #workspaces button:hover {
+      border-radius: 30px;
+      color: #89bda6;
+      background-color: #2e3440;
+      padding-left: 4px;
+      padding-right: 4px;
+  }
+  
+  #taskbar button.active,
+  #workspaces button.active {
     border-radius: 30px;
-    padding-left: 4px;
-    padding-right: 4px;
-    margin-top: 5px;
-    margin-bottom: 4px;
-    margin-left: 5px;
-}
-
-#taskbar button:hover,
-#workspaces button:hover {
-	  border-radius: 30px;
-	  color: #89bda6;
-	  background-color: @surface0;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-#workspaces button.persistent {
-	  color: @surface1;
-	  border-radius: 30px;
-}
-
-#taskbar button.active,
-#workspaces button.active {
-	  color: #89bda6;
-	  background-color: #2e3440;
-    border-radius: 30px;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-#workspaces button.urgent {
-	  color: #ff3030;
-    border-radius: 0px;
-}
+      background-color: #2e3440;
+      color: #89bda6;
+      border-radius: 30px;
+      padding-left: 4px;
+      padding-right: 4px;
+  }
+  
+  #workspaces button.urgent {
+      color: #ff3030;
+      border-radius: 0px;
+  }
+  
+  #workspaces button.focused {
+      color: #d8dee9;
+  }
 
   #cpu,
   #memory,
@@ -153,7 +152,7 @@
 
   #my_apps {
     font-size: 12px;
-    background-color: #89bda6;
+    background-image: radial-gradient(circle, #8ed0b2, #73a48e);
     padding-left: 8px;
     padding-right: 8px;
     margin-top: 5px;
@@ -166,7 +165,7 @@
   #pulseaudio,
   #backlight {
     font-size: 12px;
-    background: #89bda6;
+    background-image: radial-gradient(circle, #8ed0b2, #73a48e);
     margin-top: 5px;
     margin-bottom: 5px;
   }
