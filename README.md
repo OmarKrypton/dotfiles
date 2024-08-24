@@ -78,7 +78,7 @@
 
 3. Run the script in your terminal:
    ```bash
-   bash setup_dotfiles.sh
+   ./setup_dotfiles.sh
 
 ## Install Manually
    - Clone the repo.
