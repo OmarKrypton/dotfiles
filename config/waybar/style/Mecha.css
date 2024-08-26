@@ -6,7 +6,13 @@
     min-height: 11px;
 }
 
+
+/* COLORS */
 @import "theme.css";
+@define-color dark          #181825;
+@define-color mid           #1e1e2e;
+@define-color bright        #313244;
+@define-color off-white     #f2e4cb;
 
 window#waybar {
     background: @bar-bg;
@@ -33,13 +39,13 @@ tooltip {
     padding-left: 2px;
     padding-right: 2px;
     margin-right: 0px;
-    color: #f2e4cb;
+    color: @off-white;
     animation: ws_normal 20s ease-in-out 1;
 }
 #workspaces button.active {
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 1);
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
-    background: #f2e4cb;
+    background: @off-white;
     color: @wb-act-fg;
     margin-left: 2px;
     padding-left: 8px;
@@ -75,24 +81,6 @@ tooltip {
     padding-right: 4px;
 }
 
-/* COLORS */
-@define-color workspaces    #181825;
-
-@define-color cpuinfo       #181825;
-@define-color memory        #1e1e2e;
-@define-color cpu           #313244;
-
-@define-color arch          #f2e4cb;
-
-@define-color time          #313244;
-@define-color date          #1e1e2e;
-@define-color wifi          #181825;
-@define-color network       #313244;
-
-@define-color pulseaudio    #181825;
-@define-color backlight     #1e1e2e;
-@define-color battery       #313244;
-@define-color power         #f2e4cb;
 
 /* MODULES */
 /* WINDOW ICON */
@@ -108,7 +96,7 @@ tooltip {
 }
 #custom-left1 {
     font-size: 11.5pt;
-    color: @workspaces;
+    color: @dark;
     background: @main-bg;
     margin-bottom: -2px;
     padding-left: 2px;
@@ -117,11 +105,11 @@ tooltip {
 /* WORKSPACES */
 #workspaces {
     padding: 0;
-    background: @workspaces;
+    background: @dark;
 }
 #custom-right1 {
     font-size: 11.5pt;
-    color: @workspaces;
+    color: @dark;
     background: @main-bg;
     margin-bottom: -2px;
     padding-right: 3px;
@@ -130,7 +118,7 @@ tooltip {
 /* WINDOW TITLE */
 #window {
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    color: #f2e4cb;
+    color: @off-white;
 }
 
 /* TEMPERATURE */
@@ -139,7 +127,7 @@ tooltip {
 }
 #custom-left2 {
     font-size: 11.5pt;
-    color: @cpuinfo;
+    color: @dark;
     background: @main-bg;
     margin-bottom: -2px;
     border-radius: 10px;
@@ -148,63 +136,56 @@ tooltip {
 #custom-cpuinfo {
     padding-left: 1px;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @cpuinfo;
+    background: @dark;
 }
 
 /* MEMORY */
-#custom-left3 {
-    font-size: 11.5pt;
-    color: @memory;
-    background: @cpuinfo;
-    margin-bottom: -2px;
-    padding-left: 3px;
-}
 #memory {
     padding-left: 1px;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @memory;
-    color: #f2e4cb;
+    background: @mid;
+    color: @off-white;
 }
-
-/* CPU */
 #custom-left4 {
     font-size: 11.5pt;
-    color: @cpu;
-    background: @memory;
+    color: @bright;
+    background: @mid;
     margin-bottom: -2px;
     padding-left: 3px;
 }
+
+/* CPU */
 #cpu {
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @cpu;
-    color: #f2e4cb;
+    background: @bright;
+    color: @off-white;
 }
 #custom-leftin1 {
     font-size: 11.5pt;
-    color: @cpu;
+    color: @bright;
     margin-bottom: -2px;
 }
 
 /* MENU */
 #custom-left5 {
     font-size: 11.5pt;
-    color: @arch;
+    color: @off-white;
     background: @main-bg;
     margin-bottom: -2px;
     padding-left: 3px;
 }
 #custom-menu {
 	text-shadow: none;
-    color: @backlight;
+    color: @mid;
     font-size: 13pt;
     padding-left: 3px;
     padding-right: 2px;
-    background: @arch;
+    background: @off-white;
     margin-bottom: -2px;
 }
 #custom-right2 {
     font-size: 11.5pt;
-    color: @arch;
+    color: @off-white;
     background: @main-bg;
     margin-bottom: -2px;
     padding-right: 3px;
@@ -213,18 +194,18 @@ tooltip {
 /* TIME */
 #custom-rightin1 {
     font-size: 11.5pt;
-    color: @time;
+    color: @bright;
     margin-bottom: -2px;
 }
 #clock.time {
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @time;
-    color: #f2e4cb;
+    background: @bright;
+    color: @off-white;
 }
 #custom-right3 {
     font-size: 11.5pt;
-    color: @time;
-    background: @date;
+    color: @bright;
+    background: @mid;
     margin-bottom: -2px;
     padding-right: 3px;
 }
@@ -232,70 +213,77 @@ tooltip {
 /* DATE */
 #clock.date {
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @date;
-    color: #f2e4cb;
+    background: @mid;
+    color: @off-white;
 }
 #custom-right4 {
     font-size: 11.5pt;
-    color: @date;
-    background: @wifi;
+    color: @mid;
+    background: @dark;
     margin-bottom: -2px;
     padding-right: 3px;
 }
 
 /* SWAYNC */
+#custom-swaync {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @dark;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: @off-white;
+}
+#custom-left3 {
+    font-size: 11.5pt;
+    color: @mid;
+    background: @dark;
+    margin-bottom: -2px;
+    padding-left: 3px;
+}
+
+/* IDLE INHIBIROR */
+#idle_inhibitor {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @dark;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: @off-white;
+}
+#custom-right5 {
+    font-size: 11.5pt;
+    color: @dark;
+    background: @main-bg;
+    margin-bottom: -2px;
+    padding-right: 3px;
+}
+
+/* CONNECTION */
 #custom-left11 {
     font-size: 11.5pt;
-    color: @pulseaudio;
+    color: @dark;
     background: @main-bg;
     margin-bottom: -2px;
     padding-left: 3px;
 }
-#custom-swaync {
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @pulseaudio;
-    padding-left: 6px;
-    padding-right: 6px;
-    color: #f2e4cb;
-}
-
-/* IDLE INHIBIROR */
 #custom-left10 {
     font-size: 11.5pt;
-    color: @backlight;
-    background: @pulseaudio;
-    margin-bottom: -2px;
-    padding-left: 3px;
-}
-#idle_inhibitor {
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @pulseaudio;
-    padding-left: 6px;
-    padding-right: 6px;
-    color: #f2e4cb;
-}
-
-/* CONNECTION */
-#custom-left9 {
-    font-size: 11.5pt;
-    color: @network;
-    background: @backlight;
+    color: @mid;
+    background: @dark;
     margin-bottom: -2px;
     padding-left: 3px;
 }
 #network {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @network;
-    color: #f2e4cb;
+    background: @mid;
+    color: @off-white;
 }
-#custom-right5 {
+#custom-left9 {
     font-size: 11.5pt;
-    color: @wifi;
-    background: @main-bg;
+    color: @bright;
+    background: @mid;
     margin-bottom: -2px;
-    padding-right: 3px;
+    padding-left: 3px;
 }
 
 /* MEDIA INFO */
@@ -306,57 +294,65 @@ tooltip {
 }
 
 /* OUTPUT DEVICE */
+#pulseaudio {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @bright;
+    color: @off-white;
+}
 #custom-left6 {
     font-size: 11.5pt;
-    color: @pulseaudio;
-    background: @network;
+    color: @dark;
+    background: @bright;
     margin-bottom: -2px;
     padding-left: 3px;
 }
-#pulseaudio {
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @pulseaudio;
-    color: #f2e4cb;
-}
 
 /* BRIGHTNESS */
+#backlight {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @dark;
+    color: @off-white;
+}
 #custom-left7 {
     font-size: 11.5pt;
-    color: @backlight;
-    background: @pulseaudio;
+    color: @mid;
+    background: @dark;
     margin-bottom: -2px;
     padding-left: 2px;
 }
-#backlight {
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @backlight;
-    color: #f2e4cb;
+
+/* Keyboard */
+#language {
+    background: @mid;
+    color: @off-white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#custom-left8 {
+    font-size: 11.5pt;
+    color: @bright;
+    background: @mid;
+    margin-bottom: -2px;
+    padding-left: 2px;
 }
 
 /* BATTERY */
-#custom-left8 {
-    font-size: 11.5pt;
-    color: @battery;
-    background: @backlight;
-    margin-bottom: -2px;
-    padding-left: 2px;
-}
 #battery {
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
-    background: @battery;
-    color: #f2e4cb;
+    background: @bright;
+    color: @off-white;
 }
 
 /* POWER BUTTON */
 #custom-leftin2 {
     font-size: 11.5pt;
-    color: @battery;
+    color: @bright;
     background: @main-bg;
     margin-bottom: -2px;
 }
 #custom-power {
     color: @main-bg;
-    background: @power;
+    background: @off-white;
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 1);
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
     border-radius: 20px;
@@ -366,6 +362,8 @@ tooltip {
     padding-left: 10px;
     padding-right: 7px;
 }
+
+
 #custom-paddr {
     font-size: 11.5pt;
     color: @main-bg;

@@ -1,384 +1,435 @@
 {
-    "layer": "top",
-    "position": "top",
-    "mode": "dock",
-    "height": 20,
-    "exclusive": true,
-    "passthrough": false,
-    "gtk-layer-shell": true,
-    "reload_style_on_change": true,
+"layer": "top",
+"position": "top",
+"mode": "dock",
+"height": 20,
+"exclusive": true,
+"passthrough": false,
+"gtk-layer-shell": true,
+"reload_style_on_change": true,
+
+"modules-left": [
+    "custom/left1",
+    "hyprland/workspaces",
+    "custom/right1",
+
+    "custom/paddw",
+    "hyprland/window"
+],
+"modules-center": [
+    "custom/paddc",
+    "custom/left2",
     
-    "modules-left": [
-        "custom/left1",
-        "hyprland/workspaces",
-        "custom/right1",
+    "custom/swaync",
+    "custom/left3",
     
-        "custom/paddw",
-        "hyprland/window"
+    "memory",
+    "custom/left4",
+    
+    "cpu",
+    "custom/leftin1",
+    
+    "custom/left5",
+    "custom/menu",
+    "custom/right2",
+
+    "custom/rightin1",
+    "clock#time",
+    "custom/right3",
+
+    "clock#date",
+    "custom/right4",
+    
+    "idle_inhibitor",
+    "custom/right5"
+],
+"modules-right": [
+    "custom/left11",
+    
+    "custom/left10",
+    
+    "network",
+    "custom/left9",
+    
+    "pulseaudio",
+    "custom/left6",
+
+    "backlight",
+    "custom/left7",
+
+    "hyprland/language",
+    "custom/left8",
+
+    "battery",
+    "custom/leftin2",
+
+    "custom/power"
+],
+
+"network": {
+    "format": "{ifname}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰌘",
+    "format-disconnected": "󰌙",
+    "tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
+    "format-linked": "󰈁 {ifname} (No IP)",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} 󰌘",
+    "tooltip-format-disconnected": "󰌙 Disconnected",
+    "max-length": 30,
+    "format-icons": [
+        "󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
     ],
-    "modules-center": [
-        "custom/paddc",
-        "custom/left2",
-        "custom/swaync",
-        "custom/cpuinfo",
-        
-        "custom/left3",
-        "memory",
-        
-        "custom/left4",
-        "cpu",
-        "custom/leftin1",
-        
-        "custom/left5",
-        "custom/menu",
-        "custom/right2",
-    
-        "custom/rightin1",
-        "clock#time",
-        "custom/right3",
-    
-        "clock#date",
-        "custom/right4",
-        "idle_inhibitor",
-        "custom/right5"
-    ],
-    "modules-right": [
-        "custom/left11",
-        "custom/left10",
-    
-        "custom/left9",
-        
-        "network",
-        "custom/left6",
-    
-        "pulseaudio",
-        "custom/left7",
-    
-        "backlight",
-        "custom/left8",
-    
-        "battery",
-        "custom/leftin2",
-    
-        "custom/power"
-    ],
-    
-    "network": {
-        "format": "{ifname}",
-        "format-wifi": "{icon}",
-        "format-ethernet": "󰌘",
-        "format-disconnected": "󰌙",
-        "tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
-        "format-linked": "󰈁 {ifname} (No IP)",
-        "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
-        "tooltip-format-ethernet": "{ifname} 󰌘",
-        "tooltip-format-disconnected": "󰌙 Disconnected",
-        "max-length": 30,
-        "format-icons": [
-            "󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
-        ],
-        "on-click-right": "kitty nmtui"
-    }, 
-    
-    "hyprland/workspaces": {
-        "all-outputs": false,
-        "active-only": false,
-        "on-click": "activate",
-        "disable-scroll": false,
-        "on-scroll-up": "hyprctl dispatch workspace -1",
-        "on-scroll-down": "hyprctl dispatch workspace +1",
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
-        },
-        "sort-by-number": true
+    "on-click-right": "kitty nmtui"
+}, 
+
+"hyprland/workspaces": {
+    "all-outputs": true,
+    "active-only": false,
+    "on-click": "activate",
+    "disable-scroll": false,
+    "show-special": false,
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
     },
-    
-    "hyprland/window": {
-        "format": "{}",
-        "separate-outputs": true,
-        "rewrite": {
-            "omar@fedora:(.*)": "  $1",
-            "(.*)omar@fedora:~": "  omar@fedora",
-            "(.*) — Mozilla Firefox": "<span foreground='#f38ba8'>󰈹</span>  $1",
-            "(.*)Mozilla Firefox": "<span foreground='#f38ba8'>󰈹</span>  Firefox",
-            "(.*) - Visual Studio Code": "<span foreground='#89b4fa'>󰨞</span>  $1",
-            "(.*)Visual Studio Code": "<span foreground='#89b4fa'>󰨞</span>  Visual Studio Code",
-            "(.*)Spotify Premium": "<span foreground='#a6e3a1'></span>  Spotify Premium",
-            "Discord": "<span foreground='#89b4fa'></span>  Discord",
-            "GNU Image Manipulation Program": "<span foreground='#a6adc8'></span>  GNU Image Manipulation Program",
-            "OBS(.*)": "<span foreground='#a6adc8'>󰐌</span>  OBS Studio",
-            "VLC media player": "<span foreground='#fab387'>󰕼</span>  VLC Media Player",
-            "ONLYOFFICE Desktop Editors": "<span foreground='#f38ba8'></span>  OnlyOffice Desktop",
-            "qView": "  qView",
-            "(.*).jpg": "  $1.jpg",
-            "(.*).png": "  $1.png",
-            "(.*).svg": "  $1.svg",
-            "/": "  File Manager"
-        },
-        "min-length": 5,
-        "max-length": 45
+    "sort-by-number": true
+},
+
+"hyprland/workspaces#kanji": {
+	"disable-scroll": true,
+	"on-scroll-up": "hyprctl dispatch workspace e+1",
+	"on-scroll-down": "hyprctl dispatch workspace e-1",
+	"show-special": false,
+	"all-outputs": true,
+	"format": "{icon}",
+	"persistent-workspaces": {
+		"1": [],
+		"2": [],
+		"3": [],
+		"4": [],
+		"5": [],
+	},
+	"format-icons": {
+		"1": "一",
+		"2": "二",
+		"3": "三",
+		"4": "四",
+		"5": "五",
+		"6": "六",
+		"7": "七",
+		"8": "八",
+		"9": "九",
+		"10": "十",
+	}
+},
+
+"hyprland/window": {
+    "format": "{}",
+    "separate-outputs": true,
+    "rewrite": {
+        "omar@fedora:(.*)": "  $1",
+        "(.*)omar@fedora:~": "  omar@fedora",
+        "(.*)~": "  ~",
+        "(.*)~/(.*)": "  $2",
+        "(.*) — Mozilla Firefox": "<span foreground='#f38ba8'>󰈹</span>  $1",
+        "(.*)Mozilla Firefox": "<span foreground='#f38ba8'>󰈹</span>  Firefox",
+        "(.*) — Librewolf": "🐺 $1",
+        "(.*)Librewolf": "🐺 Librewolf",
+        "(.*) - Visual Studio Code": "<span foreground='#89b4fa'>󰨞</span>  $1",
+        "(.*)Visual Studio Code": "<span foreground='#89b4fa'>󰨞</span>  Visual Studio Code",
+        "(.*) - VSCodium": "<span foreground='#89b4fa'></span>  $1",
+        "(.*)VSCodium": "<span foreground='#89b4fa'></span>  VSCodium",
+        "(.*)Spotify Premium": "<span foreground='#a6e3a1'></span>  Spotify Premium",
+        "(.*) - Discord": "<span foreground='#7289da'></span>  $1",
+        "(.*)Discord": "<span foreground='#7289da'></span>  Discord",
+        "(.*)discord(.*)": "<span foreground='#7289da'></span>  $2",
+        "(.*) - Vesktop": "<span foreground='#7289da'></span>  $1",
+        "(.*)Vesktop": "<span foreground='#7289da'></span>  Vesktop",
+        "(.*)vesktop(.*)": "<span foreground='#7289da'></span>  $2",
+        "GNU Image Manipulation Program": "<span foreground='#a6adc8'></span>  GNU Image Manipulation Program",
+        "OBS(.*)": "<span foreground='#a6adc8'>󰐌</span>  OBS Studio",
+        "VLC media player": "<span foreground='#fab387'>󰕼</span>  VLC Media Player",
+        "ONLYOFFICE Desktop Editors": "<span foreground='#f38ba8'></span>  OnlyOffice Desktop",
+        "qView": "  qView",
+        "(.*).jpg": "  $1.jpg",
+        "(.*).png": "  $1.png",
+        "(.*).svg": "  $1.svg",
+        "/": "  File Manager"
     },
-    
-    "custom/cpuinfo": {
-        "exec": "~/.config/waybar/scripts/cpuinfo.sh",
-        "return-type": "json",
-        "format": "{}",
-        "tooltip": true,
-        "interval": 5,
-        "min-length": 8,
-        "max-length": 8
-    },
-    
-    "memory": {
-        "states": {"c": 90},
-        "format": "󰘚 {percentage}%",
-        "format-c": "󰀪 {percentage}%",
-        "tooltip": true,
-        "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB",
-        "interval": 20,
-        "min-length": 7,
-        "max-length": 7
-    },
-    
-    "cpu": {
-        "format": "󰻠 {usage}%",
-        "tooltip": false,
-        "interval": 5,
-        "min-length": 6,
-        "max-length": 6
-    },
-    
-    "custom/menu": {
-        "format": "",
-        "on-click": "pkill rofi || rofi -show drun -modi run,drun,filebrowser,window",
-        "on-click-middle": "~/.config/hypr/UserScripts/WallpaperSelect.sh",
-        "on-click-right": "~/.config/hypr/scripts/WaybarLayout.sh",
-        "tooltip": true,
-        "tooltip-format": "Left Click: Rofi Menu\nMiddle Click: Wallpaper Menu\nRight Click: Waybar Layout Menu",
-    },
-    
-    "clock#time": {
-        "format": "󱑂 {:%H:%M}",
-        "tooltip": false,
-        "min-length": 8,
-        "max-length": 8
-    },
-    
-    "clock#date": {
-        "format": "󱨴 {:%m-%d}",
-        "tooltip-format": "<tt>{calendar}</tt>",
-        "calendar": {
-            "mode": "month",
-            "mode-mon-col": 3,
-            "on-click-right": "mode",
-            "format": {
-                "months": "<span color='#f5e0dc'><b>{}</b></span>",
-                "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
-                "today": "<span color='#f38ba8'><b>{}</b></span>"
-            }
-        },
-        "actions": {"on-click-right": "mode"},
-        "min-length": 8,
-        "max-length": 8
-    },
-    
-    "custom/swaync": {
-        "tooltip": true,
-        "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
-        "format": "{icon} {}",
-        "format-icons": {
-            "notification": "<span foreground='red'><sup></sup></span>",
-            "none": "",
-            "dnd-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-none": "",
-            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "inhibited-none": "",
-            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-            "dnd-inhibited-none": ""
-        },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "sleep 0.1 && swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true
-    },
-    
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": " ",
-            "deactivated": " "
+    "min-length": 5,
+    "max-length": 45
+},
+
+"custom/cpuinfo": {
+    "exec": "~/.config/waybar/scripts/cpuinfo.sh",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 5,
+    "min-length": 8,
+    "max-length": 8
+},
+
+"memory": {
+    "states": {"c": 90},
+    "format": "󰘚 {percentage}%",
+    "format-c": "󰀪 {percentage}%",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB",
+    "interval": 20,
+    "min-length": 7,
+    "max-length": 7
+},
+
+"cpu": {
+    "format": "󰻠 {usage}%",
+    "tooltip": false,
+    "interval": 5,
+    "min-length": 6,
+    "max-length": 6
+},
+
+"custom/menu": {
+    "format": "",
+    "on-click": "pkill rofi || rofi -show drun -modi run,drun,filebrowser,window",
+    "on-click-middle": "~/.config/hypr/UserScripts/WallpaperSelect.sh",
+    "on-click-right": "~/.config/hypr/scripts/WaybarLayout.sh",
+    "tooltip": true,
+    "tooltip-format": "Left Click: Rofi Menu\nMiddle Click: Wallpaper Menu\nRight Click: Waybar Layout Menu",
+},
+
+"clock#time": {
+    "format": "󱑂 {:%H:%M}",
+    "tooltip": false,
+    "min-length": 8,
+    "max-length": 8
+},
+
+"clock#date": {
+    "format": "󱨴 {:%m-%d}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+        "mode": "month",
+        "mode-mon-col": 3,
+        "on-click-right": "mode",
+        "format": {
+            "months": "<span color='#f5e0dc'><b>{}</b></span>",
+            "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+            "today": "<span color='#f38ba8'><b>{}</b></span>"
         }
     },
-    
-    "custom/wifi": {
-        "exec": "~/.config/waybar/scripts/network-status.sh",
-        "interval": 30,
-        "format": "󰢾 SKY",
-        "tooltip": true,
-        "tooltip-format": "{}",
-        "on-click": "~/.config/waybar/scripts/network-menu.sh",
-        "min-length": 6,
-        "max-length": 6
+    "actions": {"on-click-right": "mode"},
+    "min-length": 8,
+    "max-length": 8
+},
+
+"custom/swaync": {
+    "tooltip": true,
+    "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+    "format": "{icon} {}",
+    "format-icons": {
+        "notification": "<span foreground='red'><sup></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-none": ""
     },
-    
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": "婢 {volume}%",
-        "format-icons": {
-            "headphone": "󰋋",
-            "default": ["󰖀", "󰕾"]
-        },
-        "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
-        "on-click-right": "pavucontrol -t 3",
-        "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
-        "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
-        "scroll-step": 5.0,
-        "min-length": 6,
-        "max-length": 6
-    },
-    
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "tooltip": false,
-        "on-scroll-up": "brightnessctl set 5%+",
-        "on-scroll-down": "brightnessctl set 5%-",
-        "min-length": 6,
-        "max-length": 6
-    },
-    
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "{icon} {capacity}%",
-        // "format-icons": ["", "", "", "", ""],
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "format-charging": "󱘖 {capacity}%",
-        "format-plugged": "󱘖 {capacity}%",
-        "tooltip-format": "{time}",
-        "interval": 1,
-        "min-length": 6,
-        "max-length": 6
-    },
-    
-    "custom/power": {
-        "format": "⏻ ",
-        "on-click": "~/.config/hypr/scripts/Wlogout.sh",
-        "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh",
-        "tooltip": true,
-        "tooltip-format": "Left Click: Logout Menu\nRight Click: Change Blur"
-    },
-    
-    //padding
-    "custom/paddl": {
-        "format": " ",
-        "tooltip": false
-    },
-    "custom/paddw": {
-        "format": " ",
-        "tooltip": false
-    },
-    "custom/paddc": {
-        "format": "   ",
-        "tooltip": false
-    },
-    "custom/paddr": {
-        "format": "",
-        "tooltip": false
-    },
-    
-    // LEFT arrows
-    "custom/left1": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/left2": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/left3": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/left4": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/left5": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/left6": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/left7": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/left8": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/left9": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/left10": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/left11": {
-        "format": "",
-        "tooltip": false
-    },
-    
-    // RIGHT arrows
-    "custom/right1": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/right2": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/right3": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/right4": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/right5": {
-        "format": "",
-        "tooltip": false
-    },
-    
-    // LEFT inverse
-    "custom/leftin1": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/leftin2": {
-        "format": "",
-        "tooltip": false
-    },
-    
-    // RIGHT inverse
-    "custom/rightin1": {
-        "format": "",
-        "tooltip": false
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+},
+
+"idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": " ",
+        "deactivated": " "
     }
-    }
-    
+},
+
+"custom/wifi": {
+    "exec": "~/.config/waybar/scripts/network-status.sh",
+    "interval": 30,
+    "format": "󰢾 SKY",
+    "tooltip": true,
+    "tooltip-format": "{}",
+    "on-click": "~/.config/waybar/scripts/network-menu.sh",
+    "min-length": 6,
+    "max-length": 6
+},
+
+"pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "婢 {volume}%",
+    "format-icons": {
+        "headphone": "󰋋",
+        "default": ["󰖀", "󰕾"]
+    },
+    "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
+    "on-click-right": "pavucontrol -t 3",
+    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
+    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+    "scroll-step": 5.0,
+    "min-length": 6,
+    "max-length": 6
+},
+
+"backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "tooltip": false,
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "min-length": 6,
+    "max-length": 6
+},
+
+"battery": {
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    // "format-icons": ["", "", "", "", ""],
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": "󱘖 {capacity}%",
+    "format-plugged": "󱘖 {capacity}%",
+    "tooltip-format": "{time}",
+    "interval": 1,
+    "min-length": 6,
+    "max-length": 6
+},
+
+"custom/power": {
+    "format": "⏻ ",
+    "on-click": "~/.config/hypr/scripts/Wlogout.sh",
+    "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh",
+    "tooltip": true,
+    "tooltip-format": "Left Click: Logout Menu\nRight Click: Change Blur"
+},
+
+"hyprland/language": {
+	"format": ": {}",
+	"format-en": "US",
+	"format-tr": "Korea",
+	"format-ar": "AR",
+	"keyboard-name": "at-translated-set-2-keyboard",
+	"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+},
+
+//padding
+"custom/paddl": {
+    "format": " ",
+    "tooltip": false
+},
+"custom/paddw": {
+    "format": " ",
+    "tooltip": false
+},
+"custom/paddc": {
+    "format": "   ",
+    "tooltip": false
+},
+"custom/paddr": {
+    "format": "",
+    "tooltip": false
+},
+
+// LEFT arrows
+"custom/left1": {
+    "format": "",
+    "tooltip": false
+},
+"custom/left2": {
+    "format": "",
+    "tooltip": false
+},
+"custom/left3": {
+    "format": "",
+    "tooltip": false
+},
+"custom/left4": {
+    "format": "",
+    "tooltip": false
+},
+"custom/left5": {
+    "format": "",
+    "tooltip": false
+},
+"custom/left6": {
+    "format": "",
+    "tooltip": false
+},
+"custom/left7": {
+    "format": "",
+    "tooltip": false
+},
+"custom/left8": {
+    "format": "",
+    "tooltip": false
+},
+"custom/left9": {
+    "format": "",
+    "tooltip": false
+},
+"custom/left10": {
+    "format": "",
+    "tooltip": false
+},
+"custom/left11": {
+    "format": "",
+    "tooltip": false
+},
+
+// RIGHT arrows
+"custom/right1": {
+    "format": "",
+    "tooltip": false
+},
+"custom/right2": {
+    "format": "",
+    "tooltip": false
+},
+"custom/right3": {
+    "format": "",
+    "tooltip": false
+},
+"custom/right4": {
+    "format": "",
+    "tooltip": false
+},
+"custom/right5": {
+    "format": "",
+    "tooltip": false
+},
+
+// LEFT inverse
+"custom/leftin1": {
+    "format": "",
+    "tooltip": false
+},
+"custom/leftin2": {
+    "format": "",
+    "tooltip": false
+},
+
+// RIGHT inverse
+"custom/rightin1": {
+    "format": "",
+    "tooltip": false
+}
+}
