@@ -13,8 +13,10 @@
     "hyprland/workspaces",
     "custom/right1",
 
-    "custom/paddw",
-    "hyprland/window"
+
+    "custom/rightin2",
+    "hyprland/window",
+    "custom/right6"
 ],
 "modules-center": [
     "custom/paddc",
@@ -44,7 +46,6 @@
     "custom/right5"
 ],
 "modules-right": [
-    "custom/left11",
     
     "custom/left10",
     
@@ -160,7 +161,8 @@
         "(.*).jpg": "  $1.jpg",
         "(.*).png": "  $1.png",
         "(.*).svg": "  $1.svg",
-        "/": "  File Manager"
+        "/": "  File Manager",
+        "": "<span foreground='#cba6f7'></span>  Omar 󰅂 Hyprland"
     },
     "min-length": 5,
     "max-length": 45
@@ -416,6 +418,10 @@
     "format": "",
     "tooltip": false
 },
+"custom/right6": {
+    "format": "",
+    "tooltip": false
+},
 
 // LEFT inverse
 "custom/leftin1": {
@@ -429,6 +435,10 @@
 
 // RIGHT inverse
 "custom/rightin1": {
+    "format": "",
+    "tooltip": false
+},
+"custom/rightin2": {
     "format": "",
     "tooltip": false
 }

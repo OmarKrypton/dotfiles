@@ -15,7 +15,7 @@
 @define-color off-white     #f2e4cb;
 
 window#waybar {
-    background: @bar-bg;
+    background: transparent;
 }
 
 tooltip {
@@ -96,8 +96,8 @@ tooltip {
 }
 #custom-left1 {
     font-size: 11.5pt;
-    color: @dark;
-    background: @main-bg;
+    color: @mid;
+    background: @mid;
     margin-bottom: -2px;
     padding-left: 2px;
 }
@@ -105,12 +105,12 @@ tooltip {
 /* WORKSPACES */
 #workspaces {
     padding: 0;
-    background: @dark;
+    background: @mid;
 }
 #custom-right1 {
     font-size: 11.5pt;
-    color: @dark;
-    background: @main-bg;
+    color: @mid;
+    background: @dark;
     margin-bottom: -2px;
     padding-right: 3px;
 }
@@ -118,19 +118,20 @@ tooltip {
 /* WINDOW TITLE */
 #custom-rightin2 {
     font-size: 11.5pt;
-    color: @main-bg;
-    background: @main-bg;
+    color: @dark;
+    background: @dark;
     margin-bottom: -2px;
 }
 
 #window {
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
     color: @off-white;
+    background: @dark;
 }
 
 #custom-right6 {
     font-size: 11.5pt;
-    color: @main-bg;
+    color: @dark;
     background: transparent;
     margin-bottom: -2px;
     padding-right: 3px;
@@ -143,7 +144,7 @@ tooltip {
 #custom-left2 {
     font-size: 11.5pt;
     color: @dark;
-    background: @main-bg;
+    background: transparent;
     margin-bottom: -2px;
     border-radius: 10px;
     padding-left: 3px;
@@ -178,6 +179,7 @@ tooltip {
 #custom-leftin1 {
     font-size: 11.5pt;
     color: @bright;
+    background: @main-bg;
     margin-bottom: -2px;
 }
 
@@ -210,6 +212,7 @@ tooltip {
 #custom-rightin1 {
     font-size: 11.5pt;
     color: @bright;
+    background: @main-bg;
     margin-bottom: -2px;
 }
 #clock.time {
@@ -266,7 +269,7 @@ tooltip {
 #custom-right5 {
     font-size: 11.5pt;
     color: @dark;
-    background: @main-bg;
+    background: transparent;
     margin-bottom: -2px;
     padding-right: 3px;
 }
@@ -282,7 +285,7 @@ tooltip {
 #custom-left10 {
     font-size: 11.5pt;
     color: @mid;
-    background: @main-bg;
+    background: transparent;
     margin-bottom: -2px;
     padding-left: 3px;
 }
@@ -362,7 +365,7 @@ tooltip {
 #custom-leftin2 {
     font-size: 11.5pt;
     color: @bright;
-    background: @main-bg;
+    background: transparent;
     margin-bottom: -2px;
 }
 #custom-power {
