@@ -1,0 +1,270 @@
+{
+"layer": "top",
+"position": "top",
+"mode": "dock",
+"height": 20,
+"exclusive": true,
+"passthrough": false,
+"gtk-layer-shell": true,
+"reload_style_on_change": true,
+
+  "modules-left": [
+    "group/quicklinks-left", 
+    "wlr/taskbar",
+    "hyprland/window",
+  ],
+
+  "modules-center": [
+    "hyprland/workspaces",
+  ],
+  
+  "modules-right": [
+    "mpd",
+    "group/hardware",
+    "network",
+    "pulseaudio",
+    "clock",
+    "group/quicklinks-right",
+  ],
+
+  //Taskbar
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": "20",
+    "on-click": "activate",
+    "on-click-right": "close",
+    "tooltip-format": "Go to {title}",
+    "ignore-list": ["kitty", "kitty-scratchpad"],
+  },
+
+  // Hyprland
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "show-special": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+    },
+
+    "format-icons": {
+      "1": " ",
+      "2": " ",
+      "3": " ",
+    },
+  },
+  "hyprland/window": {
+    "format": "{initialTitle}",
+    "icon": true,
+    "icon-size": 18,
+    "max-length": 30,
+    "separate-outputs": true,
+    "rewrite": {
+      "(.*) - Brave": "$1",
+    },
+  },
+
+  // Quicklinks
+  "group/quicklinks-left": {
+    "orientation": "horizontal",
+    "modules": [
+      "image",
+      "custom/chatgpt",
+      "custom/terminal",
+      "custom/browser",
+      "custom/explorer",
+    ],
+  },
+  "image": {
+    "path": "/home/hrigved/Pictures/Icons/arch.png",
+    "on-click": "~/.config/rofi/menus/drun.sh",
+    "size": 18,
+  },
+  "custom/chatgpt": {
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": "Open Gemini!",
+    "on-click": "librewolf https://gemini.google.com",
+  },
+  "custom/terminal": {
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": "Open Kitty!",
+    "on-click": "kitty",
+  },
+  "custom/browser": {
+    "format": "󰖟",
+    "tooltip": true,
+    "tooltip-format": "Open Librewolf!",
+    "on-click": "librewolf",
+  },
+  "custom/explorer": {
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": "Open Thunar!",
+    "on-click": "thunar",
+  },
+
+  "group/quicklinks-right": {
+    "orientation": "horizontal",
+    "modules": ["custom/swaync", "idle_inhibitor", "custom/power"],
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": " ",
+      "deactivated": " ",
+    },
+  },
+  "custom/swaync": {
+	"tooltip": true,
+	"tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+	"format": "{icon} {}",
+	"format-icons": {
+		"notification": "<span foreground='red'><sup></sup></span>",
+		"none": "",
+		"dnd-notification": "<span foreground='red'><sup></sup></span>",
+		"dnd-none": "",
+		"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+		"inhibited-none": "",
+		"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+		"dnd-inhibited-none": ""
+	},
+	"return-type": "json",
+	"exec-if": "which swaync-client",
+	"exec": "swaync-client -swb",
+	"on-click": "sleep 0.1 && swaync-client -t -sw",
+	"on-click-right": "swaync-client -d -sw",
+	"escape": true,
+},
+  //"group/power-menu": {
+  //  "orientation": "inherit",
+  //  "drawer": {
+  //    "transition-duration": 500,
+  //    "children-class": "power-child",
+  //    "transition-left-to-right": false,
+  //  },
+  //  "modules": [
+  //    "custom/wlogout",
+  //    "custom/reboot",
+  //    "custom/quit",
+  //    "custom/suspend",
+  //    "custom/lock",
+  //  ],
+  //},
+"custom/power": {
+    "format": "⏻ ",
+    "on-click": "~/.config/hypr/scripts/Wlogout.sh",
+    "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh",
+    "tooltip": true,
+    "tooltip-format": "Left Click: Logout Menu\nRight Click: Change Blur"
+},
+  //"custom/lock": {
+  //  "format": " ",
+  //  "on-click": "hyprlock",
+  //},
+  //"custom/quit": {
+  //  "format": "󰍃 ",
+  //  "on-click": "hyprctl dispatch exit",
+  //},
+  //"custom/suspend": {
+  //  "format": "⏾ ",
+  //  "on-click": "systemctl suspend",
+  //},
+  //"custom/reboot": {
+  //  "format": " ",
+  //  "on-click": "systemctl reboot",
+  //},
+  "custom/wallpaper": {
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": " Change Wallpaper!",
+    "on-click": "~/.config/rofi/menus/swww.sh",
+  },
+
+  // Settings
+  "group/settings": {
+    "orientation": "horizontal",
+    "modules": [],
+  },
+
+  // Temperature
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""],
+  },
+
+  // Audio setup
+"pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "{volume}% ",
+    "format-icons": {
+        "headphone": "󰋋",
+        "default": [""," ", " "]
+    },
+    "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
+    "on-click-right": "pavucontrol -t 3",
+    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
+    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+    "scroll-step": 5.0,
+    "min-length": 6,
+    "max-length": 6
+},
+
+  // Network setup
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%)  ",
+    "format-ethernet": "{bandwidthDownBytes}  ",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid}  ",
+    "tooltip-format-ethernet": "{ifname}  ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "interval": 2,
+    "on-click-right": "kitty nmtui"
+  },
+
+  // Hardware info
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": ["disk", "cpu", "memory"],
+  },
+  "disk": {
+    "format": "{percentage_used}%  ",
+    "path": "/home",
+  },
+  "cpu": {
+    "format": " {usage}%  ",
+    "interval": 1,
+    "min-length": 5,
+    "format-alt-click": "click",
+    "format-alt": "{icon0}{icon1}{icon2}{icon3} {usage:>2}%  ",
+    "format-icons": [
+  	"▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
+    ],
+    "on-click-right": "gnome-system-monitor",
+  },
+  "memory": {
+    "interval": 10,
+    "format": "{used:0.1f}G  ",
+    "format-alt": "{percentage}%  ",
+    "format-alt-click": "click",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
+    "on-click-right": "kitty --title btop sh -c 'btop'"
+  },
+
+  // Clock
+  "clock": {
+    "format": "󱑂 {:%R %a}", // 19:28 Mon
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "󰨳 {:%d %b %Y}", // 25 Dec 2006
+  },
+}
