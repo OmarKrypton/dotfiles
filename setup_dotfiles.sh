@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printf "\n%.0s" {1..2}
+printf "\n\n"
 echo ' ____  __.                      __                  '
 echo '|    |/ _|______ ___.__._______/  |_  ____   ____   '
 echo '|      < \_  __ <   |  |\____ \   __\/  _ \ /    \  '
@@ -13,7 +13,7 @@ echo ' |    |  \ /  _ \   __\   __\|  |  | _/ __ \ /  ___/'
 echo ' |    `   (  <_> )  |  |  |  |  |  |_\  ___/ \___ \ '
 echo '/_______  /\____/|__|  |__|  |__|____/\___  >____  >'
 echo '        \/                                \/     \/  '
-printf "\n%.0s" {1..2}
+printf "\n\n"
 
 # Set the source directory for your dotfiles
 DOTFILES_DIR="$HOME/Downloads/dotfiles"
@@ -38,4 +38,3 @@ cp -r "$DOTFILES_DIR/wallpapers/." ~/Pictures/wallpapers/ > /dev/null 2>&1
 echo "Successfully copied wallpapers!"
 
 echo "Dotfiles setup completed!"
-
