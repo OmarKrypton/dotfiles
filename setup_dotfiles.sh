@@ -33,7 +33,6 @@ echo "Successfully copied icons and themes!"
 
 # Copy config content
 echo "Copying configuration files..."
-mkdir -p ~/.config
 cp -vr "$DOTFILES_DIR/config/." ~/.config/
 echo "Successfully copied config files!"
 
