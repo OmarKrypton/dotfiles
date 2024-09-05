@@ -74,7 +74,7 @@
 ## Install via Script
 1. Clone the repo:
    ```bash
-   git clone --depth 1 https://github.com/OmarKrypton/dotfiles.git ~/Downloads
+   git clone --depth 1 https://github.com/OmarKrypton/dotfiles.git ~/Downloads/dotfiles
 
 3. Run the script in your terminal:
    ```bash
