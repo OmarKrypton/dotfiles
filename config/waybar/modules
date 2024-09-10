@@ -2,6 +2,53 @@
 /* Waybar Modules */
 
 {
+
+// Weather and Temperature Modules as this is most like to change always. 
+// Result is of course easier to edit
+"custom/weather": {
+	"format": "{}",
+	"format-alt": "{alt}: {}",
+	"format-alt-click": "click",
+	"interval": 3600,
+	"return-type": "json",
+	"exec": "~/.config/hypr/UserScripts/Weather.sh",
+	//"exec": "~/.config/hypr/UserScripts/Weather.py",
+	"exec-if": "ping wttr.in -c1",
+	"tooltip": true,
+},
+"temperature": {
+	"interval": 10,
+	"tooltip": true,
+	"hwmon-path": [
+		"/sys/class/hwmon/hwmon1/temp1_input",
+		"/sys/class/thermal/thermal_zone0/temp"
+	],
+	//"thermal-zone": 0,
+	"critical-threshold": 82,
+	"format-critical": "{temperatureC}°C {icon}",
+	"format": "{temperatureC}°C {icon}",
+	"format-icons": [
+		"󰈸"
+	],
+	"on-click-right": "kitty --title nvtop sh -c 'nvtop'"
+},
+"temperature#vertical": {
+	"interval": 10,
+	"tooltip": true,
+	"hwmon-path": [
+		"/sys/class/hwmon/hwmon1/temp1_input",
+		"/sys/class/thermal/thermal_zone0/temp"
+	],
+	//"thermal-zone": 0,
+	"critical-threshold": 80,
+	"format-critical": "{icon}\n{temperatureC}°C",
+	"format": " {icon}",
+	"format-icons": [
+		"󰈸"
+	],
+	"on-click-right": "kitty --title nvtop sh -c 'nvtop'"
+},
+
 // HYPRLAND WORKSPACES. CHOOSE as desired and place on waybar configs
 // CIRCLES Style
 "hyprland/workspaces": {
@@ -149,14 +196,22 @@
 		"title<.*reddit.*>": " ",
 		"title<.*Picture-in-Picture.*>": " ",
 		"class<firefox>": " ",
-		"class<kitty>": " ",
-		"class<konsole>": " ",
+		"class<org.mozilla.firefox>": " ",
+		"class<kitty>": " ",
+		"class<kitty-dropterm>": " ",
+		"class<konsole>": " ",
+		"class<Chromium>": "<span font='12'> </span>",
+		"class<org.telegram.desktop|io.github.tdesktop_x64.TDeskto>": "<span font='12'> </span>",
+		"class<[Ss]potify>": "<span font='12'> </span>",
+		"class<VSCode|code-url-handler>": "<span font='12'>󰨞</span>",
 		"class<thunar>": "󰝰 ",
+		"class<[Tt]hunderbird>": " ",
 		"class<discord>": " ",
 		"class<WebCord>": " ",
 		"class<subl>": "󰅳 ",
 		"class<celluloid>": " ",
 		"class<Cider>": "󰎆 ",
+		"class<virt-manager>": " ",
 		"class<code-oss>": "󰨞 ",
 		"class<codium|codium-url-handler|VSCodium>": "󰨞 ",
 		"class<codeblocks>": "󰅩 ",
@@ -164,7 +219,7 @@
 		"class<libreoffice-writer>": " ",
 		"class<libreoffice-startcenter>": "󰏆 ",
 		"class<com.obsproject.Studio>": " "
-		}   
+		}  
 },
 // for Camilla or Spanish
 "hyprland/workspaces#cam": {
@@ -260,7 +315,7 @@
 		"network",
 		"bluetooth",
 	]
-},                                     
+},
 "backlight": {
 	"interval": 2,
 	"align": 0,
@@ -629,7 +684,8 @@
 	"ignore-list": [
 		"wofi",
 		"rofi",
-		"kitty"
+		"kitty",
+    "kitty-dropterm"
 		],
 },
 "custom/cycle_wall": {
@@ -765,17 +821,7 @@
 	"tooltip": true,
 	"tooltip-format": "Left Click: Update System\nArch Linux Only",
 },
-"custom/weather": {
-	"format": "{}",
-	"format-alt": "{alt}: {}",
-	"format-alt-click": "click",
-	"interval": 3600,
-	"return-type": "json",
-	"exec": "~/.config/hypr/UserScripts/Weather.sh",
-	//"exec": "~/.config/hypr/UserScripts/Weather.py",
-	"exec-if": "ping wttr.in -c1",
-	"tooltip": true,
-},
+
 // Separators
 "custom/separator#dot": {
 	"format": "",
@@ -892,22 +938,6 @@
 	"max-volume": 100,
 	"tooltip": true,
 	"tooltip-format": "{source_desc} | {source_volume}%",
-},
-"temperature#vertical": {
-	"interval": 10,
-	"tooltip": true,
-	"hwmon-path": [
-		"/sys/class/hwmon/hwmon1/temp1_input",
-		"/sys/class/thermal/thermal_zone0/temp"
-	],
-	//"thermal-zone": 0,
-	"critical-threshold": 80,
-	"format-critical": "{icon}\n{temperatureC}°C",
-	"format": " {icon}",
-	"format-icons": [
-		"󰈸"
-	],
-	"on-click-right": "kitty --title nvtop sh -c 'nvtop'"
 },
 "custom/power_vertical": {
 	"format": "⏻",
