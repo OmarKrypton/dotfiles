@@ -74,7 +74,7 @@
    ```bash
    git clone --depth 1 https://github.com/OmarKrypton/dotfiles.git ~/Downloads/dotfiles
 
-3. Run the script in your terminal:
+2. Run the script in your terminal:
    ```bash
    ./setup_dotfiles.sh
 
