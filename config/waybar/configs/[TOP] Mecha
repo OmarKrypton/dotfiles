@@ -9,12 +9,12 @@
 "reload_style_on_change": true,
 
 "modules-left": [
-    "custom/left1",
+    "custom/rightin1",
     "hyprland/workspaces",
-    "custom/right1",
+    "custom/right3",
 
-
-    "custom/rightin2",
+    "wlr/taskbar",
+    "custom/right4",
     "hyprland/window",
     "custom/right6"
 ],
@@ -66,6 +66,14 @@
 
     "custom/power"
 ],
+
+"wlr/taskbar": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-click-right": "close",
+    "tooltip-format": "Go to {title}",
+    "ignore-list": ["kitty", "kitty-scratchpad", "kitty-dropterm"],
+  },
 
 "network": {
     "format": "{ifname}",
@@ -131,42 +139,15 @@
 },
 
 "hyprland/window": {
-    "format": "{}",
+    "format": "{initialTitle}",
+    "icon": false,
+    "icon-size": 18,
+    "max-length": 30,
     "separate-outputs": true,
     "rewrite": {
-        "omar@fedora:(.*)": "  $1",
-        "(.*)omar@fedora:~": "  omar@fedora",
-        "(.*)~": "  ~",
-        "(.*)~/(.*)": "  $2",
-        "(.*) — Mozilla Firefox": "<span foreground='#f38ba8'>󰈹</span>  $1",
-        "(.*)Mozilla Firefox": "<span foreground='#f38ba8'>󰈹</span>  Firefox",
-        "(.*) — Librewolf": "🐺 $1",
-        "(.*)Librewolf": "🐺 Librewolf",
-        "(.*) - Visual Studio Code": "<span foreground='#89b4fa'>󰨞</span>  $1",
-        "(.*)Visual Studio Code": "<span foreground='#89b4fa'>󰨞</span>  Visual Studio Code",
-        "(.*) - VSCodium": "<span foreground='#89b4fa'></span>  $1",
-        "(.*)VSCodium": "<span foreground='#89b4fa'></span>  VSCodium",
-        "(.*)Spotify Premium": "<span foreground='#a6e3a1'></span>  Spotify Premium",
-        "(.*) - Discord": "<span foreground='#7289da'></span>  $1",
-        "(.*)Discord": "<span foreground='#7289da'></span>  Discord",
-        "(.*)discord(.*)": "<span foreground='#7289da'></span>  $2",
-        "(.*) - Vesktop": "<span foreground='#7289da'></span>  $1",
-        "(.*)Vesktop": "<span foreground='#7289da'></span>  Vesktop",
-        "(.*)vesktop(.*)": "<span foreground='#7289da'></span>  $2",
-        "GNU Image Manipulation Program": "<span foreground='#a6adc8'></span>  GNU Image Manipulation Program",
-        "OBS(.*)": "<span foreground='#a6adc8'>󰐌</span>  OBS Studio",
-        "VLC media player": "<span foreground='#fab387'>󰕼</span>  VLC Media Player",
-        "ONLYOFFICE Desktop Editors": "<span foreground='#f38ba8'></span>  OnlyOffice Desktop",
-        "qView": "  qView",
-        "(.*).jpg": "  $1.jpg",
-        "(.*).png": "  $1.png",
-        "(.*).svg": "  $1.svg",
-        "/": "  File Manager",
-        "": "<span foreground='#cba6f7'></span>  Omar 󰅂 Hyprland"
+      "(.*) - Brave": "$1",
     },
-    "min-length": 5,
-    "max-length": 45
-},
+  },
 
 "custom/cpuinfo": {
     "exec": "~/.config/waybar/scripts/cpuinfo.sh",
