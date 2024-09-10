@@ -14,6 +14,7 @@
 ### These are my Hyprland configuration files. They are based on [JaKooLit's Hyprland dotfiles](https://github.com/JaKooLit/Hyprland-Dots) with custom configurations tailored to my preferences.
 </div>
 
+
 # Custom Configurations
 
 ### Waybar
@@ -65,6 +66,9 @@
 
 # Installation Instructions
 
+> [!CAUTION] 
+> **Make sure to backup your current configs before proceeding.**
+
 ## Install via Script
 1. Clone the repo:
    ```bash
@@ -75,11 +79,11 @@
    ./setup_dotfiles.sh
 
 ## Install Manually
-   - Clone the repo.
-   - Create the following directories in your home directory if you don't have them: .icons and .themes.
-   - Copy the contents of the project's icons and themes directories into the corresponding directories you just created.
-   - Copy the contents of the project's config directory into the ~/.config directory.
-   - Wallpapers are integrated with hyprlock.conf, copy them into ~/Pictures/wallpapers.
+ 1. Clone the repo.
+ 2. Create the following directories in your home directory if you don't have them: .icons and .themes.
+ 3. Copy the contents of the project's icons and themes directories into the corresponding directories you just created.
+ 4. Copy the contents of the project's config directory into the ~/.config directory.
+ 5. Wallpapers are integrated with hyprlock.conf, copy them into ~/Pictures/wallpapers.
 
 ## Additional Installation Instructions
   **Powerlevel10k with Oh My Zsh:**
@@ -101,7 +105,10 @@
   Then Add the following to the end of ~/.zshrc:
 
     eval "$(starship init zsh)"
-  ***Note:*** Use either Powerlevel10k or Starship.
+    
+  > [!NOTE]
+> _Use either Powerlevel10k or Starship._
+<br>
 
   ### Example Screenshots
  
