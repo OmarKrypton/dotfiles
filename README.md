@@ -17,19 +17,13 @@
 # Custom Configurations
 
 ### Waybar
-- Added modules, styles, and configurations.
-- Removed duplicated Wi-Fi icon by flagging nm-applet --indicator in Startup_Apps.conf.
-
-### Keyboard Layout
-- Changed keyboard layout switching method: Disabled SwitchKeyboardLayout.sh by renaming it to .sh.bak. 
-- Using UserSettings.conf for `kb_layout` and `kb_options` along with the "hyprland/language" module in Waybar.
-- If the "hyprland/language" module doesn't work, update `~/.config/waybar/modules` with your keyboard name using `hyprctl devices` to find it.
+- 30+ Configs and 40+ styles added (some styles require changing waybar layout).
 
 ### Hyprlock
 - Added scripts to display uptime on the lock screen.
 
 ### Themes
-- Added GTK, Kvantum, Kitty, and Rofi themes for a cohesive look across all apps.
+- Added **GTK**, **Kvantum**, **Kitty**, and **Rofi** themes for a cohesive look across all apps.
 - Personalized appearance with a preferred color scheme.
 
 # Screenshots
