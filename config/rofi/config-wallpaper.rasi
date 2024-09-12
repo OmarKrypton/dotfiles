@@ -9,8 +9,8 @@ configuration {
 }
 
 window {
-  width: 60%;
-  height: 500;
+  width: 70%;
+  height: 600;
 }
 
 /* ---- Imagebox ---- */
@@ -22,13 +22,13 @@ imagebox {
 
 
 entry {
-  expand: false;
+  expand: true;
   placeholder: "🎞️ Choose Wallpaper";
 }
 
 /* ---- Listview ---- */
 listview {
-  columns: 5;
+  columns: 4;
   lines: 3;
 }
 
@@ -41,7 +41,7 @@ element {
 }
 
 element-icon {
-  size: 20%;
+  size: 15%;
 }
 
 element-text {
