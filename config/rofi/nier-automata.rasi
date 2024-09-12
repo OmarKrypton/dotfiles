@@ -1,5 +1,10 @@
+/* ---- Load wallust colors ---- */
+@theme "~/.config/rofi/wallust/colors-rofi.rasi"
+
+/* ---- Global Properties ---- */
 * {
     bg-col:  #1e1e2e;
+    bg-dark:  #181825;
     bg-col-light: #1e1e2e;
     border-col: #1e1e2e;
     selected-col: #1e1e2e;
@@ -19,154 +24,219 @@
     green: #a6e3a1;
     nier:  #f2e4cb;
 
-    width: 600;
-    font: "JetBrainsMono Nerd Font 14";
+    background-alt:              @selected-active-background; // Buttons background
+    selected:                    @selected-urgent-background; // Button selected
+    active:                      @selected-normal-background; // Window activated
+    urgent:                      @selected; // When hovering the activated window (maybe more?)
+
+    text-selected:               @background;
+    text-color:                  @foreground;
+    border-color:                @selected;
+
+    width:                       600;
+    font:                        "JetBrainsMono Nerd Font 14";
 }
 
-element-text, element-icon , mode-switcher {
-    background-color: inherit;
-    text-color:       inherit;
+
+
+prompt {
+    background-color:           @background;
+    padding:                    6px;
+    text-color:                 @nier;
+    border:                     2;
+    border-radius:              10px;
+    border-color:               @nier;
+    margin:                     20px 0px 0px 5px;
 }
 
 
+/* ---- Window ---- */
 window {
-    height: 500;
-    width: 600;
-    border: 3px;
-    border-radius: 10;
-    border-color: @nier;
-    background-color: @bg-col;
+    // Default
+    enabled:                    true;
+    fullscreen:                 false;
+    transparency:               "real";
+    cursor:                     "default";
+    spacing:                    0px;
+    border:                     2px;
+    border-radius:              30px;
+    location:                   center;
+    anchor:                     center;
+
+    // Style Values
+    width:                      50%;
+    background-color:           @background;
+    border-color:               @nier;
 }
 
+/* ----- Main Box ----- */
 mainbox {
-    background-color: @bg-col;
+	padding:					 15px;
+    enabled:                     true;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listbox" ];
+    background-color:            transparent;
 }
 
+/* ---- Inputbar ---- */
 inputbar {
-    children: [prompt,entry];
-    background-color: @bg-col;
-    border-radius: 10px;
+    children:                    [prompt,entry];
+    background-color:            transparent;
+    border-radius:               10px;
     padding:                     10px 10px 25px 10px;
     orientation:                 horizontal;
     background-image:            url("~/.config/rofi/.current_wallpaper", width);
 }
 
-scrollbar {
-    width:        4px ;
-    border:       0;
-    border-color: @lavender;
-    border-radius: 0px;
-    handle-color: @lavender;
-    handle-width: 5px ;
-    padding:      4;
-    background-color: @bg-col;
-}
-
-prompt {
-    background-color: @nier;
-    padding: 6px;
-    text-color: @bg-col;
-    border: 2;
-    border-radius: 10px;
-    border-color: @bg-col;
-    margin: 20px 0px 0px 5px;
-}
-
-textbox-prompt-colon {
-    expand: false;
-    str: ":";
-}
-
+/* ---- Entry input ---- */
 entry {
-    padding: 6px;
-    margin: 20px 5px 0px 5px;
-    text-color: @nier;
-    background-color: @bg-col;
-    border: 2;
-    border-radius: 10;
-    border-color: @nier;
+    padding:                     6px;
+    margin:                      20px 5px 0px 5px;
+    text-color:                  @nier;
+    background-color:            @background;
+    border:                      2;
+    border-radius:               10;
+    border-color:                @nier;
+    cursor:                      text;
+    placeholder:                 "🖥️ Search "; // << Search symbol
+    placeholder-color:           inherit;
 }
 
+/* ---- Listbox ---- */
+listbox {
+    spacing:                     10px;
+    padding:                     10px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+/* ---- Listview ---- */
 listview {
+    enabled:                     true;
+    columns:                     2;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
     scrollbar:                   true;
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 20px 5px 5px 5px;
-    columns: 2;
-    lines: 6;
-    background-color: @bg-col;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               true;    
+    spacing:                     10px;
+    background-color:            transparent;
+
+//  Adapt rofi theme
+    border:                      0px;
 }
 
-element {
-    padding: 15px;
-    vertical-align: 0.5;
-    background-color: @bg-col;
-    text-color: @fg-col  ;
-    border-radius: 10;
-}
-
-
-element-icon {
-    size: 25px;
-}
-
-element selected {
-    background-color:  @nier ;
-    text-color: @bg-col  ;
-}
-
+/* ---- Mode Switcher ---- */
 mode-switcher {
-    spacing: 0;
-  }
+    spacing:                     0;
+}
 
 button {
-    padding: 10px;
-    background-color: @bg-col-light;
-    text-color: @grey;
-    vertical-align: 0.5; 
-    horizontal-align: 0.5;
+    width:                       5%;
+    padding:                     12px;
+    border-radius:               12px;
+    background-color:            @text-selected;
+    text-color:                  @text-color;
+    cursor:                      pointer;
 }
 
 button selected {
-  background-color: @bg-col;
-  text-color: @blue;
+    background-color:            @selected;
+    text-color:                  @text-selected;
 }
 
+/* ---- Scrollbar ---- */
+scrollbar {
+    width:                       4px;
+    border:                      0;
+    handle-color:                @border-color;
+    handle-width:                8px;
+    padding:                     0;
+    background-color:            transparent;
+}
+
+/* ---- Elements ---- */
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px;
+    border-radius:               12px;
+    background-color:            transparent;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element normal.urgent {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+element normal.active {
+    background-color:            @active;
+    text-color:                  @foreground;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @text-selected;
+}
+element selected.urgent {
+    background-color:            @urgent;
+    text-color:                  @text-selected;
+}
+element selected.active {
+    background-color:            @urgent;
+    text-color:                  @text-selected;
+}
+// Adapt rofi theme
+element alternate.normal {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element alternate.urgent {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element alternate.active {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        36px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/* ---- Message ---- */
 message {
-    background-color: @bg-col-light;
-    margin: 2px;
-    padding: 2px;
-    border-radius: 5px;
+    background-color:            transparent;
+    border:                      0px;
 }
-
 textbox {
-    padding: 6px;
-    margin: 20px 0px 0px 20px;
-    text-color: @blue;
-    background-color: @bg-col-light;
+    padding:                     12px;
+    border-radius:               10px;
+    background-color:            @background-alt;
+    text-color:                  @background;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
 }
-
-
-element.alternate.normal {
-    background-color: inherit;
-}
-
-element.normal.active, element.alternate.active {
-    background-color: @peach;
-}
-
-element.selected.active {
-    background-color: @green;
-}
-
-element.normal.urgent, element.alternate.urgent {
-    background-color: @red;
-}
-
-element.selected.urgent {
-    background-color: @mauve;
-}
-
-element-text .active, element-text .urgent {
-    text-color: @base;
+error-message {
+    padding:                     12px;
+    border-radius:               20px;
+    background-color:            @background-alt;
+    text-color:                  @background;
 }
