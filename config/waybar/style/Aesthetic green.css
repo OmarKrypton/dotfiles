@@ -44,7 +44,19 @@
   }
 
   /* Workspace */
-  #taskbar button,
+  #taskbar button {
+    color: #496759;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+    border-radius: 30px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 5px;
+    margin-bottom: 4px;
+    margin-left: 5px;
+  }
+
   #workspaces button {
       color: #2e3440;
       box-shadow: none;
