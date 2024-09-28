@@ -6,37 +6,42 @@
 
 {
  
-"include": "~/.config/waybar/modules",
-"layer": "top",
-//"mode": "dock",
-"exclusive": true,
-"passthrough": false,
-"position": "bottom",
-"spacing": 4,
-"fixed-center": true,
-"ipc": true,
-"margin-top": 5,
-//"margin-bottom": 5,
-"width": 1444,
+	"include": [
+	  "$HOME/.config/waybar/Modules",
+	  "$HOME/.config/waybar/ModulesWorkspaces",
+	  "$HOME/.config/waybar/ModulesCustom",
+	  "$HOME/.config/waybar/ModulesGroups",
+	  ],
+	"layer": "top",
+	//"mode": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"position": "bottom",
+	"spacing": 4,
+	"fixed-center": true,
+	"ipc": true,
+	"margin-top": 5,
+	//"margin-bottom": 5,
+	"width": 1444,
+		
+	"modules-left": [
+		"hyprland/workspaces#roman", 
+		"mpris", 
+		"custom/swaync", 
+		"tray"
+		],
+	  
+	"modules-center": ["clock#4"], 
+		
+	"modules-right": [
+		"battery",
+		"custom/separator#blank",
+		"backlight",
+		"custom/separator#blank",
+		"pulseaudio",
+		"custom/separator#blank",
+		"temperature",
+		"custom/separator#blank",	
+		"network"],
 	
-"modules-left": [
-	"hyprland/workspaces#roman", 
-	"mpris", 
-	"custom/swaync", 
-	"tray"
-	],
-  
-"modules-center": ["clock#4"], 
-	
-"modules-right": [
-	"battery",
-	"custom/separator#blank",
-	"backlight",
-	"custom/separator#blank",
-	"pulseaudio",
-	"custom/separator#blank",
-	"temperature",
-	"custom/separator#blank",	
-	"network"],
-
-}	
+	}	

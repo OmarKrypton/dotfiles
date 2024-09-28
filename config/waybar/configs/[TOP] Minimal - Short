@@ -3,30 +3,35 @@
 // ### Minimal -SHORT ### //
 
 {
-"include": "~/.config/waybar/modules",
-"layer": "top",
-"position": "top",
-"width": 1050,
-"margin-top": 3,
-
-"modules-left": [
-	"clock",  
-	"custom/weather", 
-	],
-
-"modules-center": [
-	"hyprland/workspaces#roman"
-	],
-
-"modules-right": [
-	"custom/menu", 
-	"tray",
-	"custom/swaync",
-	"mpris", 
-	"network", 
-	"bluetooth", 
-	"backlight", 
-	"pulseaudio", 
-	"battery", 
-	"custom/power"],
-}
+	"include": [
+	  "$HOME/.config/waybar/Modules",
+	  "$HOME/.config/waybar/ModulesWorkspaces",
+	  "$HOME/.config/waybar/ModulesCustom",
+	  "$HOME/.config/waybar/ModulesGroups",
+	  ],
+	"layer": "top",
+	"position": "top",
+	"width": 1050,
+	"margin-top": 3,
+	
+	"modules-left": [
+		"clock",  
+		"custom/weather", 
+		],
+	
+	"modules-center": [
+		"hyprland/workspaces#roman"
+		],
+	
+	"modules-right": [
+		"custom/menu", 
+		"tray",
+		"custom/swaync",
+		"mpris", 
+		"network", 
+		"bluetooth", 
+		"backlight", 
+		"pulseaudio", 
+		"battery", 
+		"custom/power"],
+	}

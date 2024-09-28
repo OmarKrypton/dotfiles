@@ -1,7 +1,5 @@
 /* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
-/* ..........................................*/
 /* .......Crystal Clear....................... */
-/* ......................................... */
 /* --- 👍 designed by https://github.com/Krautt  👍 --- */
 
 *{
@@ -89,16 +87,24 @@ window#waybar.empty #window {
 #window,
 #wireplumber,
 #workspaces,
+#custom-backlight,
+#custom-browser,
+#custom-cava_mviz,
 #custom-cycle_wall,
-#custom-hint,
+#custom-file_manager,
+#custom-keybinds,
 #custom-keyboard,
 #custom-light_dark,
 #custom-lock,
+#custom-hint,
+#custom-hypridle,
 #custom-menu,
 #custom-power_vertical,
 #custom-power,
-#custom-swaync,
+#custom-settings,
 #custom-spotify,
+#custom-swaync,
+#custom-tty,
 #custom-updater,
 #custom-weather,
 #custom-weather.clearNight,
@@ -126,6 +132,13 @@ window#waybar.empty #window {
 	color: #000000;
 	   }
 }
+
+/*-----Indicators----*/
+#custom-hypridle.notactive,
+#idle_inhibitor.activated {
+	color: #39FF14;
+}
+
 #taskbar button:hover {
     padding-left: 3px;
     padding-right: 3px;
@@ -192,42 +205,6 @@ window#waybar.empty #window {
 	min-width: 10px; 
 	border-radius: 5px;
 	background-color: wheat;
-}
-
-/*----My apps----*/
-#custom-vesktop {
-    padding-right: 9px;
-    font-size: 12px;
-}
-
-#custom-telegram{
-    padding-right: 13px;
-    font-size: 12px;
-}
-
-#custom-thunar{
-    padding-right: 13px;
-    font-size: 12px;
-}
-
-#custom-codium{
-    padding-right: 14px;
-    font-size: 13px;
-}
-
-#custom-librewolf {
-    padding-right: 13px;
-    font-size: 12px;
-}
-
-#custom-menu {
-    padding-top: 2px;
-    padding-right: 2px;
-    padding-left: 10px;
-}
-#custom-vscode{
-	padding-right: 14px;
-	font-size: 13px;
 }
 	
 	
